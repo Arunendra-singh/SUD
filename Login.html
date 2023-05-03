@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUD</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .custom-select {
+            position: relative;
+            width: 100%;
+        }
+        
+        .custom-select select {
+            display: none;
+            /*hide original SELECT element:*/
+        }
+        /*style the arrow inside the select element:*/
+        
+        .select-selected:after {
+            position: absolute;
+            content: "";
+            top: 17px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-color: #6e6e6e transparent transparent transparent;
+        }
+        /*point the arrow upwards when the select box is open (active):*/
+        
+        .select-selected.select-arrow-active:after {
+            rotate: 180deg;
+            top: 7px;
+        }
+        /*style the items (options), including the selected item:*/
+        
+        .select-items div,
+        .select-selected {
+            color: #000000;
+            padding: 5px 15px 5px 2px;
+            border-bottom: 1px solid #6e6e6e;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 500;
+        }
+        /*style items (options):*/
+        
+        .select-items {
+            position: absolute;
+            background-color: #fff;
+            top: 100%;
+            left: 0;
+            right: 0;
+            transition: all 0.5s;
+            z-index: 99;
+            box-shadow: 0px 4px 9px 0px rgb(0 0 0 / 16%);
+            padding: 10px 10px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #000000;
+            cursor: pointer;
+        }
+        /*hide the items when the select box is closed:*/
+        
+        .select-hide {
+            display: none;
+        }
+        
+        .select-items div:hover,
+        .same-as-selected {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .custom-select.mobile_no .select-selected {
+            padding: 0;
+            padding-right: 25px;
+        }
+        
+        .custom-select.mobile_no .select-selected:after {
+            top: 10px;
+        }
+        
+        .custom-select.mobile_no .select-selected.select-arrow-active:after {
+            rotate: 180deg;
+            top: 0;
+        }
+        
+        .select-items div:last-child {
+            border-bottom: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="login_page">
+        <div class="main-block">
+            <div class="col-xs-12 login-page-leftside">
+                <div class="child-wrap">
+                    <h1>Your <br/><span>secured journey</span> <br/>starts here!</h1>
+                    <div class="img-warp">
+                        <img src="imgs/girl_img.png" alt="">
+                        <div class="txt-content">
+                            <p>Fulfill that dream <br/>you have been <br/> dreaming about</p>
+                        </div>
+                    </div>
+                    <div class="foot_content">
+                        <h3>Invest with <br/> Star Union Dai-ichi Life Insurance</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 login-page-rightside">
+                <!-- <div class="child"></div> -->
+                <h4>For whom are you applying for SUD Life- E Wealth Royal "Self" or "Reference"</h4>
+
+                <div class="page-content login">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="company-selection">
+                                <label>Company Name</label>
+
+                                <div class="custom-select child_element">
+
+                                    <select>
+                                        <option value="">SUD Life</option>
+                                        <option value="">UBI</option>
+                                        <option value="">BOI</option>
+                                        <option value="">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="form_field hide">
+                                <input type="text" placeholder="Enter Company Name" style="position: relative;top: 30px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+
+                        <ul class="LoginTabs nav">
+                            <li class="Tab_wrap Tab1">
+                                <a class="active" data-toggle="tab">
+                                    SELF (EMPLOYEE)
+                                </a>
+                            </li>
+                            <li class="Tab_wrap Tab2">
+                                <a class="" data-toggle="tab">
+                                    REFERENCE
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="page-content tab-content col-sm-12">
+                    <div class="form-group">
+                        <div class="SelfTab tabcontainer" id="TabId1">
+                            <div class="row mr_top20px">
+
+                                <div class="col-sm-12 col-12">
+                                    <div class="row form_field">
+                                        <div class="col-sm-4 col-4 d-flex">
+                                            <div class="img_icon">
+                                                <img src="imgs/yourname.png">
+                                            </div>
+                                            <input type="text" placeholder="First Name">
+                                        </div>
+                                        <div class="col-sm-4 col-4">
+                                            <input type="text" placeholder="Middle Name">
+                                        </div>
+                                        <div class="col-sm-4 col-4">
+                                            <input type="text" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mr_top20px">
+
+                                <div class="col-sm-12 col-12">
+                                    <div class="row form_field">
+                                        <div class="col-sm-4 col-3 d-flex">
+                                            <div class="img_icon">
+                                                <img src="imgs/Mobile.png" style="width:14px;">
+                                            </div>
+
+                                            <div class="custom-select mobile_no">
+
+                                                <select class="mobile_no">
+                                                <option value="">+91</option>
+                                                <option value="">+92</option>
+                                                <option value="">+1</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-9">
+                                            <input type="text" placeholder="Mobile Number">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mr_top20px">
+                                <div class="col-sm-12 col-12">
+                                    <div class="row form_field">
+                                        <div class="col-sm-8 col-8 d-flex">
+                                            <div class="img_icon">
+                                                <img src="imgs/emailid.png" style="position: relative;top: 5px;">
+                                            </div>
+                                            <input type="text" placeholder="Email ID (Official)">
+                                        </div>
+                                        <div class="col-sm-4 col-4" style="padding: 0 2px;">
+                                            <button type="button" class="btn loginpage_otp" data-target="custom-popup">Send OTP</button>
+
+                                            <button class="hide bg_blue">
+                                                <label class="check_box">
+                                                    <input type="checkbox" checked>
+                                                    <span class="checkmark"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    Verified
+                                                </label>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row mr_top20px">
+                                <label class="check_box">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <p>I hereby consent to receive policy related communication from SUD Life Insurance Co. Ltd or its authorized representatives via Call, SMS, Email & Voice over Internet Protocol (VoIP) including WhatsApp <img src="imgs/whatsup.png"> and agree to waive my
+                                        registration on NCPR (National Customer Preference Registry) in this regard.</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ReferenceTab tabcontainer" id="TabId2">
+                            <div class="row mr_top20px">
+
+                                <div class="col-sm-12 col-12">
+                                    <div class="row form_field">
+                                        <div class="col-sm-4 col-4 d-flex">
+                                            <div class="img_icon">
+                                                <img src="imgs/yourname.png">
+                                            </div>
+                                            <input type="text" placeholder="First Name">
+                                        </div>
+                                        <div class="col-sm-4 col-4">
+                                            <input type="text" placeholder="Middle Name">
+                                        </div>
+                                        <div class="col-sm-4 col-4">
+                                            <input type="text" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mr_top20px">
+
+                                <div class="col-sm-12 col-12">
+                                    <div class="row form_field">
+                                        <div class="col-sm-3 col-3 d-flex">
+                                            <div class="img_icon">
+                                                <img src="imgs/Mobile.png" style="width:14px;">
+                                            </div>
+
+                                            <div class="custom-select mobile_no">
+
+                                                <select class="mobile_no">
+                                                <option value="">+91</option>
+                                                <option value="">+92</option>
+                                                <option value="">+1</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9 col-9">
+                                            <input type="text" placeholder="Your Mobile Number">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mr_top20px">
+
+                                <div class="col-sm-12 col-12">
+                                    <div class="row form_field">
+                                        <div class="col-sm-12 col-12 d-flex">
+                                            <div class="img_icon">
+                                                <img src="imgs/referredby.png">
+                                            </div>
+
+                                            <input type="text" placeholder="Referred By">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mr_top20px">
+
+                                <div class="col-sm-12 col-12">
+                                    <div class="row form_field">
+                                        <div class="col-sm-12 col-12 d-flex">
+                                            <div class="img_icon">
+                                                <img src="imgs/relationship.png" style="width: 25px; margin-right: 5px;">
+                                            </div>
+
+                                            <div class="custom-select mobile_no child_element">
+
+                                                <select class="mobile_no">
+                                                <option value="">Relationship with Reference</option>
+                                                <option value="">Spouse</option>
+                                                <option value="">Child</option>
+                                                <option value="">Parents</option>
+                                                <option value="">Grand Child</option>
+                                                <option value="">Own Sibling</option>
+                                                <option value="">Other/Friend</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mr_top20px">
+                                <div class="col-sm-12 col-12">
+                                    <div class="row form_field">
+                                        <div class="col-sm-8 col-8 d-flex">
+                                            <div class="img_icon">
+                                                <img src="imgs/emailid.png" style="position: relative;top: 5px;">
+                                            </div>
+                                            <input type="text" placeholder="Email ID (Official)">
+                                        </div>
+                                        <div class="col-sm-4 col-4">
+                                            <button class="loginpage_otp">Send OTP</button>
+                                            <button class="hide bg_blue">
+                                                <label class="check_box">
+                                                    <input type="checkbox" checked>
+                                                    <span class="checkmark"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    Verified
+                                                </label>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row mr_top20px">
+                                <label class="check_box">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <p>Disclaimer OPT validation text for Sud Life, BOI and UBI referrals</p>
+                                </label>
+                            </div>
+                            <div class="row">
+                                <label class="check_box">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <p>I hereby consent to receive policy related communication from SUD Life Insurance Co. Ltd or its authorized representatives via Call, SMS, Email &amp; Voice over Internet Protocol (VoIP) including WhatsApp <img src="imgs/whatsup.png"> and agree to waive my
+                                        registration on NCPR (National Customer Preference Registry) in this regard.</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="submit_btn">
+                            <button>Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  OTP Popup  -->
+            <div class="wrapper">
+                <div class="custom-popup popup-model" id="custom-popup" data-popup="custom-popup">
+                    <div class="top_border">
+                        <div class="modal-contnt">
+                            <h3>Enter One time Password ( OTP )</h3>
+                            <p class="text-center">OTP has been sent to your Mobile ******8789 and <br>Email ID (Official) ******@sudlife.in</p>
+                            <h2>Please enter the same below</h2>
+                            <div class="text-center OTP_InputDiv">
+                                <input type="text" class="OTP_Input" maxlength="5" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                <p class="text-end">Resend OTP</p>
+                            </div>
+                            <div class="text-center">
+                                <input type="button" value="VERIFY" class="RedButton">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Popup END  -->
+
+        </div>
+
+    </main>
+
+    <script src="js/jquery-3-6-0-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap_3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+    <script>
+        var x, i, j, l, ll, selElmnt, a, b, c;
+        /*look for any elements with the class "custom-select":*/
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) {
+            selElmnt = x[i].getElementsByTagName("select")[0];
+            ll = selElmnt.length;
+            /*for each element, create a new DIV that will act as the selected item:*/
+            a = document.createElement("DIV");
+            a.setAttribute("class", "select-selected");
+            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+            x[i].appendChild(a);
+            /*for each element, create a new DIV that will contain the option list:*/
+            b = document.createElement("DIV");
+            b.setAttribute("class", "select-items select-hide");
+            for (j = 1; j < ll; j++) {
+                /*for each option in the original select element,
+                create a new DIV that will act as an option item:*/
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function(e) {
+                    /*when an item is clicked, update the original select box,
+                    and the selected item:*/
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) {
+                        if (s.options[i].innerHTML == this.innerHTML) {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) {
+                                y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                        }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+            }
+            x[i].appendChild(b);
+            a.addEventListener("click", function(e) {
+                /*when the select box is clicked, close any other select boxes,
+                and open/close the current select box:*/
+                e.stopPropagation();
+                closeAllSelect(this);
+                this.nextSibling.classList.toggle("select-hide");
+                this.classList.toggle("select-arrow-active");
+            });
+        }
+
+        function closeAllSelect(elmnt) {
+            /*a function that will close all select boxes in the document,
+            except the current select box:*/
+            var x, y, i, xl, yl, arrNo = [];
+            x = document.getElementsByClassName("select-items");
+            y = document.getElementsByClassName("select-selected");
+            xl = x.length;
+            yl = y.length;
+            for (i = 0; i < yl; i++) {
+                if (elmnt == y[i]) {
+                    arrNo.push(i)
+                } else {
+                    y[i].classList.remove("select-arrow-active");
+                }
+            }
+            for (i = 0; i < xl; i++) {
+                if (arrNo.indexOf(i)) {
+                    x[i].classList.add("select-hide");
+                }
+            }
+        }
+        document.addEventListener("click", closeAllSelect);
+    </script>
+
+    <script>
+        $("div#TabId2").hide();
+        $(".LoginTabs .Tab_wrap a").click(function() {
+            $(".LoginTabs .Tab_wrap a").removeClass("active");
+            $(this).addClass("active");
+            if ($(".LoginTabs .Tab1 a").hasClass("active")) {
+                $(".tab-content .tabcontainer ").removeClass("active");
+                $(".tab-content .SelfTab").addClass("active");
+                $("div#TabId2").hide();
+                $("div#TabId1").show();
+
+            }
+
+            if ($(".LoginTabs .Tab2 a").hasClass("active")) {
+                $(".tab-content .tabcontainer ").removeClass("active");
+                $(".tab-content .ReferenceTab ").addClass("active");
+                $("div#TabId1").hide();
+                $("div#TabId2").show();
+            };
+        });
+
+        function customPopup() {
+
+            let $btnShowPopup = $('.loginpage_otp');
+            let $popup = $('.popup-model');
+
+            $btnShowPopup.on('click', function() {
+
+                let targetPopup = $(this).attr('data-target');
+                $("[data-popup=" + targetPopup + "]").addClass('is-active');
+
+            });
+
+            $popup.on('click', function(event) {
+                if (!$(event.target).closest('.js-custom-popup-holder').length && !$(event.target).is('popup-model')) {
+                    if ($popup.hasClass('is-active')) {
+                        $popup.removeClass('is-active');
+                    }
+                }
+            });
+
+        }
+        customPopup();
+    </script>
+
+</body>
+
+</html>

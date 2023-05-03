@@ -1,0 +1,786 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: poppinsRegular;
+    font-size: 13px;
+}
+
+.mr_top20px {
+    margin-top: 20px !important;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
+
+@font-face {
+    font-family: poppinsLight;
+    src: url('../fonts/Poppins-Light.woff2') format('woff2'), url('../fonts/Poppins-Light.woff') format('woff'), url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: poppinsRegular;
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'), url('../fonts/Poppins-Regular.woff') format('woff'), url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: poppinsMedium;
+    src: url('../fonts/Poppins-Medium.woff2') format('woff2'), url('../fonts/Poppins-Medium.woff') format('woff'), url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: poppinsBold;
+    src: url('../fonts/Poppins-Bold.woff2') format('woff2'), url('../fonts/Poppins-Bold.woff') format('woff'), url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*================================*/
+
+main.login_page {
+    background-image: url('../imgs/LoginBg.png');
+    float: left;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-block {
+    display: block;
+    justify-content: center;
+    position: relative;
+    padding: 10px 5px;
+    /* top: calc(30% - 100px); */
+    /* height: 80%; */
+}
+
+.login-page-leftside {
+    display: block;
+    position: relative;
+}
+
+.login-page-leftside {
+    position: relative;
+    background: #e7e7e7;
+    /* border-radius: 8px 8px; */
+    /* float: left; */
+}
+
+.login-page-leftside .child-wrap {
+    /* position: absolute; */
+    width: 100%;
+    padding: 25px 45px 45px 30px;
+}
+
+.login-page-leftside .child-wrap .img-warp {
+    position: relative;
+    /* margin-bottom: 2.5rem; */
+    clear: both;
+    width: 100%;
+    min-height: 200px;
+}
+
+.login-page-leftside .child-wrap img {
+    width: 148px;
+    position: absolute;
+    left: -30px;
+    top: -10px;
+}
+
+.login-page-leftside .child-wrap .txt-content {
+    float: right;
+}
+
+.login-page-leftside .child-wrap .txt-content p {
+    font-size: 20px;
+    /* font-weight: 600; */
+    text-align: right;
+}
+
+.login-page-rightside {
+    background: #FFFFFF;
+    height: 100%;
+    /* padding: 25px 30px; */
+    overflow: auto;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.login-page-leftside .child-wrap h1 {
+    text-align: right;
+    margin-bottom: 60px;
+    font-weight: bold;
+    font-family: poppinsBold;
+    font-size: 35px;
+}
+
+.login-page-leftside .child-wrap h1 span {
+    color: #0475BC;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.login-page-leftside .child-wrap h3 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: 'poppinsBold';
+}
+
+
+/*=================================*/
+
+.login-page-rightside h4 {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #6E6E6E;
+    letter-spacing: 1.1px;
+    line-height: 1.8;
+}
+
+label.check_box {
+    display: flex;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #272727;
+}
+
+label.check_box input[type="checkbox"] {
+    float: left;
+    margin-right: 15px;
+}
+
+label.check_box p {
+    position: relative;
+    top: 0px;
+    text-align: justify;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: inherit;
+}
+
+.company-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-selection label {
+    font-size: 13px;
+    color: gray;
+}
+
+.company-selection select {
+    border: none;
+    position: relative;
+    padding: 3px 0px;
+    border-bottom: 1px solid #6E6E6E;
+    cursor: pointer;
+}
+
+.LoginTabs {
+    margin-top: 20px;
+    border-bottom: 3px solid #0475BC;
+}
+
+.LoginTabs li {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.LoginTabs li a {
+    width: 100%;
+    float: left;
+    color: #0475BC;
+    font-size: 18px;
+    padding: 6px 0px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: poppinsRegular;
+}
+
+.LoginTabs li a.active {
+    background-color: #0475BC;
+    color: #fff;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.tab-content .form-group img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.tab-content .form-group img+input[type="text"] {
+    position: absolute;
+}
+
+.form_field input[type="text"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #6E6E6E;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form_field select.mobile_no {
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #6E6E6E;
+}
+
+select:focus-visible {
+    outline: none;
+}
+
+input[type="text"]:focus-visible {
+    outline: none;
+}
+
+
+/**/
+
+.login-page-leftside .foot_content {
+    clear: both;
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+}
+
+.login_page button {
+    background-color: #EF4123;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    float: none;
+    border: 0px;
+    padding: 5px 10px;
+}
+
+.login_page button.loginpage_otp {
+    background: #fff;
+    color: #ef4123;
+    border: 2px solid #ED412D;
+    border-radius: 8px;
+}
+
+.submit_btn {
+    text-align: center;
+}
+
+.login_page .submit_btn button {
+    width: 200px;
+}
+
+.check_box {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.check_box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+span.checkmark {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border: 1px solid #2A2A2A;
+    border-radius: 2px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.check_box input:checked~.checkmark {
+    background-color: #0475bc;
+    border: 1px solid #0475bc;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check_box input:checked~.checkmark:after {
+    display: block;
+}
+
+.check_box .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-select.child_element .select-items div {
+    border-bottom-style: dashed;
+}
+
+button.bg_blue {
+    background: #0475BC;
+}
+
+.bg_blue label.check_box {
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    padding: 5px 10px 5px 0;
+}
+
+.bg_blue label span.checkmark {
+    border: none;
+}
+
+
+/* Media query start from here 
+==============================*/
+
+@media only screen and (min-width: 1366px) {
+    main.login_page {
+        height: 100vh;
+    }
+}
+
+@media only screen and (min-width: 1233px) and (max-width: 1365px) {
+    label.check_box p {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1232px) {
+    .login_page button {
+        font-size: 13px;
+    }
+    label.check_box p {
+        top: 0px;
+        font-size: 10px;
+    }
+    .LoginTabs li a {
+        font-size: 13px;
+    }
+    .login-page-rightside h4 {
+        font-size: 13px;
+    }
+    .login-page-leftside .child-wrap h1 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .login_page button {
+        font-size: 10px;
+        padding: 4px 7px;
+    }
+    label.check_box p {
+        top: -1px;
+        font-size: 10px;
+    }
+    .LoginTabs li a,
+    .select-items div,
+    .select-selected {
+        font-size: 10px;
+    }
+    .login-page-leftside .child-wrap h1 {
+        font-size: 18px;
+    }
+    .login-page-leftside .child-wrap .txt-content p {
+        font-size: 13px;
+    }
+    .login-page-leftside .foot_content h3 {
+        font-size: 14px;
+    }
+    .login-page-leftside .child-wrap {
+        padding: 25px 20px 45px 30px;
+    }
+    .login-page-leftside .child-wrap img {
+        width: 120px;
+        top: 0px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    main.login_page {
+        height: 100%;
+        overflow: auto;
+    }
+    .main-block {
+        display: inline-flex;
+    }
+    .login-page-leftside {
+        width: 30%;
+    }
+    .login-page-rightside {
+        width: 35%;
+    }
+    .login-page-leftside {
+        border-radius: 8px 0px 0px 8px;
+        float: left;
+    }
+    .login-page-leftside .child-wrap {
+        position: relative;
+        height: 100%;
+    }
+    .login-page-rightside {
+        border-radius: 0px 8px 8px 0px;
+        padding: 25px 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .login-page-leftside,
+    .login-page-rightside {
+        margin: 0 10px;
+    }
+    .main-block {
+        padding: 30px 5px;
+    }
+    .login-page-leftside .child-wrap .img-warp {
+        margin-bottom: 5rem;
+    }
+    .login-page-leftside .foot_content h3 {
+        font-size: 24px;
+    }
+    .LoginTabs li a {
+        font-size: 14px;
+    }
+    .login-page-leftside .child-wrap h1 {
+        margin-bottom: 70px;
+    }
+    .login-page-leftside .child-wrap img {
+        top: -40px;
+    }
+    .login-page-leftside .child-wrap h1 {
+        font-size: 28px;
+    }
+    .login-page-leftside .child-wrap .txt-content p {
+        font-size: 17px;
+    }
+    .login-page-leftside .child-wrap {
+        padding: 25px 25px 20px 30px;
+    }
+    .modal-contnt {
+        padding: 20px 30px;
+    }
+    .login-page-rightside .page-content {
+        padding: 25px 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .login_page button.loginpage_otp {
+        background: #fff;
+        color: #ef4123;
+        border: 2px solid #ED412D;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+    .login-page-leftside .child-wrap .img-warp {
+        margin-bottom: 3rem;
+    }
+    .login-page-leftside .child-wrap img {
+        width: 200px;
+    }
+    label.check_box p {
+        font-size: 10px;
+        line-height: 2;
+    }
+    .login_page button {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 520px) and (max-width: 600px) {
+    .login-page-leftside .foot_content h3 {
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (min-width: 466px) and (max-width: 519px) {
+    .login-page-leftside .foot_content h3 {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    .login-page-leftside .child-wrap h1 {
+        font-size: 21px;
+    }
+    .login-page-leftside .foot_content h3 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .login-page-leftside .child-wrap .img-warp {
+        margin-bottom: 0rem;
+    }
+    .login-page-leftside .child-wrap img {
+        width: 120px;
+        top: 0;
+    }
+    .login-page-leftside .child-wrap .txt-content p {
+        font-size: 15px;
+    }
+    .LoginTabs li a {
+        font-size: 12px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    display: block;
+    border: 0;
+    padding: 10px 20px;
+    background: #3f51b5;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.2s background;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+.modal-contnt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    pointer-events: auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 0.3rem;
+    outline: 0;
+    padding: 30px 60px 20px 60px;
+}
+
+button.btn.loginpage_otp:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.top_border {
+    border-radius: 16px 16px 0px 0px;
+    opacity: 1;
+    border-top: 21px solid #0475BC;
+}
+
+.modal-contnt h3 {
+    color: #0475BC;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 21px;
+}
+
+.modal-contnt p {
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 2;
+    opacity: 0.8;
+}
+
+.modal-contnt h2 {
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.OTP_InputDiv {
+    margin-bottom: 21px;
+}
+
+.OTP_InputDiv .OTP_Input {
+    width: 90%;
+    background: #F1F1F1 padding-box;
+    border: 1px solid #D4D4D4;
+    border-radius: 8px;
+    opacity: 1;
+    padding: 5px 5px;
+}
+
+.OTP_InputDiv p {
+    color: #001CD1;
+    font-weight: bold;
+    position: relative;
+    right: 5%;
+    top: 5px;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.RedButton {
+    background: #ED412D 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    padding: 6px 10px;
+    min-width: 90%;
+    border: none;
+    color: #fff;
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+
+
+/*style the arrow inside the select element:*/
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 17px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #6e6e6e transparent transparent transparent;
+}
+
+
+/*point the arrow upwards when the select box is open (active):*/
+
+.select-selected.select-arrow-active:after {
+    rotate: 180deg;
+    top: 7px;
+}
+
+
+/*style the items (options), including the selected item:*/
+
+.select-items div,
+.select-selected {
+    color: #6e6e6e;
+    padding: 5px 15px 5px 2px;
+    border-bottom: 1px solid #6e6e6e;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/*style items (options):*/
+
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 99;
+    box-shadow: 0px 4px 9px 0px rgb(0 0 0 / 16%);
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+/*hide the items when the select box is closed:*/
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-select.mobile_no .select-selected {
+    padding: 0;
+    padding-right: 25px;
+}
+
+.custom-select.mobile_no .select-selected:after {
+    top: 10px;
+}
+
+.custom-select.mobile_no .select-selected.select-arrow-active:after {
+    rotate: 180deg;
+    top: 0;
+}
+
+.select-items div:last-child {
+    border-bottom: transparent;
+}
