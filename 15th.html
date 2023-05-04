@@ -8,6 +8,108 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <style>
+        .pageContent .accordion {
+            margin-bottom: 45px;
+        }
+        
+        ul.tabs {
+            margin: 0;
+            padding: 0;
+            float: left;
+            list-style: none;
+            height: 32px;
+            max-width: max-content;
+            position: relative;
+            top: -21px;
+            background: #fff;
+        }
+        
+        ul.tabs li {
+            float: left;
+            margin: 0 10px 0 0;
+            cursor: pointer;
+            padding: 0px 21px;
+            height: 31px;
+            line-height: 31px;
+            background: #EFEFEF 0% 0% no-repeat padding-box;
+            border: 2px solid #EF4123;
+            border-radius: 8px 8px 0px 0px;
+            opacity: 1;
+            background-color: #666;
+            color: #ccc;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        ul.tabs li:last-child {
+            margin-right: 0;
+        }
+        
+        .tab_last {
+            border-right: 1px solid #333;
+        }
+        
+        ul.tabs li:hover {
+            background-color: #ccc;
+            color: #333;
+        }
+        
+        ul.tabs li,
+        ul.tabs li:hover {
+            background-color: #fff;
+            color: #0475BC;
+            border-bottom: 1px solid #fff;
+            display: block;
+        }
+        
+        ul.tabs li span {
+            color: #EF4123
+        }
+        
+        .tab_container {
+            border-top: none;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 2px solid #EF4123;
+            border-radius: 8px;
+            opacity: 1;
+        }
+        
+        .tab_content {
+            padding: 20px;
+            display: none;
+        }
+        
+        .tab_drawer_heading {
+            display: none;
+        }
+        
+        @media screen and (max-width: 480px) {
+            .tabs {
+                display: none;
+            }
+            .tab_drawer_heading {
+                background-color: #ccc;
+                color: #fff;
+                border-top: 1px solid #333;
+                margin: 0;
+                padding: 5px 20px;
+                display: block;
+                cursor: pointer;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .d_active {
+                background-color: #666;
+                color: #fff;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -32,93 +134,80 @@
 
             <div class="pageContent">
                 <div class="row PlanSelect">
-                    <h3 class="BlueHead Width100perc"><strong>SUD life</strong> offers wide range of products which suits your needs. Kindly go through the product categories which suits you best or alternatively you can do your suitability analysis to chose your product. Please
+                    <h3 class="BlueHead Width100per"><strong>SUD life</strong> offers wide range of products which suits your needs. Kindly go through the product categories which suits you best or alternatively you can do your suitability analysis to chose your product. Please
                         <a class="RedTxt"><u>click here</u></a> for suitability analysis</h3>
 
-                    <div class="Width100per PlanBoxCntnMainDiv">
+                    <div class="Width100per PlanBoxMainDiv">
                         <div class="PlanCntnDiv">
                             <div class="card card1 active">
-                                <div class="Width100perc PlanBoxHead">
-                                    <h4>ULIP Investment <br>Plan</h4>
-                                    <img class="ColorImg" src="images/ulip.png" />
-                                    <img class="WhiteImg" src="images/ulip_white.png" />
-                                </div>
-                                <p class="Width100perc PlanBoxTxt">We understands what you want from your investments and offer you investment plans tailored to your specific needs. Investing in the right plan is important as one need to make his money grow in the right manner. It offers;
-                                </p>
-                                <div class="change">
-                                    <div class="Width100perc detailList">
-                                        <div class="Width100perc"><strong>Financial Protection : </strong><br>Life cover along with wealth creation</div>
-                                        <div class="Width100perc"><strong>Flexibility : </strong><br>Multiple options on how you can park your funds</div>
-                                        <div class="Width100perc"><strong>Diversity : </strong><br>Choose from a wide variety of investment funds with different risk return profiles</div>
-                                        <div class="Width100perc"><strong>Special Benefits : </strong><br>Loyalty additions and wealth boosters to boost your investment</div>
+                                <div class="Width100per">
+                                    <div class="PlanBoxHead">
+                                        <h4>ULIP Investment <br>Plan</h4>
+                                        <img class="ColorImg" src="images/ulip.png" />
+                                        <img class="WhiteImg" src="images/ulip_white.png" />
                                     </div>
-                                    <div class="KnowMore">
-                                        <span>KnowMore</span>
-                                        <span>Close</span>
+                                    <p class="PlanBoxTxt">We understands what you want from your investments and offer you investment plans tailored to your specific needs. Investing in the right plan is important as one need to make his money grow in the right manner. It
+                                        offers;
+                                    </p>
+                                    <div class="detailList">
+                                        <div class="KnowMoreList">
+                                            <div class="Width100per"><strong>Financial Protection : </strong><br>Life cover along with wealth creation</div>
+                                            <div class="Width100per"><strong>Flexibility : </strong><br>Multiple options on how you can park your funds</div>
+                                            <div class="Width100per"><strong>Diversity : </strong><br>Choose from a wide variety of investment funds with different risk return profiles</div>
+                                            <div class="Width100per"><strong>Special Benefits : </strong><br>Loyalty additions and wealth boosters to boost your investment</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card card2">
-                                <div>
-                                    <div class="Width100perc PlanBoxHead">
+                                <div class="Width100per">
+                                    <div class="PlanBoxHead">
                                         <h4>Saving <br>Plan</h4>
                                         <img src="images/saving.png" />
                                     </div>
-                                    <p class="Width100perc PlanBoxTxt">Saving provides a financial support for life's uncertainties and help to secure future and assures peace of mind. It helps to generate lifelong guaranteed Income suitable for;</p>
-                                    <div class="change">
-                                        <div class="Width100perc detailList">
-                                            <div class="Width100perc">Child’s higher educational and future requirements</div>
-                                            <div class="Width100perc">Buying your own house in the long run</div>
-                                            <div class="Width100perc">Generating Guaranteed income to meet your retirement needs </div>
-                                            <div class="Width100perc">To meet un planned expenses like illness /hospitalization</div>
-                                        </div>
-                                        <div class="KnowMore">
-                                            <span>KnowMore</span>
-                                            <span>Close</span>
+                                    <p class="PlanBoxTxt">Saving provides a financial support for life's uncertainties and help to secure future and assures peace of mind. It helps to generate lifelong guaranteed Income suitable for;</p>
+                                    <div class="detailList">
+                                        <div class="KnowMoreList">
+                                            <div class="Width100per">Child’s higher educational and future requirements</div>
+                                            <div class="Width100per">Buying your own house in the long run</div>
+                                            <div class="Width100per">Generating Guaranteed income to meet your retirement needs </div>
+                                            <div class="Width100per">To meet un planned expenses like illness /hospitalization</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card card3">
-                                <div>
-                                    <div class="Width100perc PlanBoxHead">
+                                <div class="Width100per">
+                                    <div class="PlanBoxHead">
                                         <h4>Retirement <br>Plan</h4>
                                         <img src="images/retirement.png" />
                                     </div>
-                                    <p class="Width100perc PlanBoxTxt">Everyone looks forward to a comfortable retired life. And a retirement plan is designed to fulfil the post-retirement needs of an individual. It helps create a corpus amount and generate a regular income after retirement
+                                    <p class="PlanBoxTxt">Everyone looks forward to a comfortable retired life. And a retirement plan is designed to fulfil the post-retirement needs of an individual. It helps create a corpus amount and generate a regular income after retirement
                                         in the form of a pension. It is suitable;</p>
-                                    <div class="change">
-                                        <div class="Width100perc detailList">
-                                            <div class="Width100perc">To meet daily needs and regular expenses</div>
-                                            <div class="Width100perc">To live a financial independent life maintains your living standard during your old age</div>
-                                            <div class="Width100perc">To live a financial independent life maintains your living standard during your old age</div>
-                                        </div>
-                                        <div class="KnowMore">
-                                            <span>KnowMore</span>
-                                            <span>Close</span>
+                                    <div class="detailList">
+                                        <div class="KnowMoreList">
+                                            <div class="Width100per">To meet daily needs and regular expenses</div>
+                                            <div class="Width100per">To live a financial independent life maintains your living standard during your old age</div>
+                                            <div class="Width100per">To live a financial independent life maintains your living standard during your old age</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card card4">
-                                <div>
-                                    <div class="Width100perc PlanBoxHead">
+                                <div class="Width100per">
+                                    <div class="PlanBoxHead">
                                         <h4>Protection <br>Plan</h4>
                                         <img src="images/protection.png" />
                                     </div>
-                                    <p class="Width100perc PlanBoxTxt">A secure future for your family is of utmost importance to you. And that what protection offers - financial security for the entire family in case of unfortunate death of the bread earner of the family. It is suitable
+                                    <p class="PlanBoxTxt">A secure future for your family is of utmost importance to you. And that what protection offers - financial security for the entire family in case of unfortunate death of the bread earner of the family. It is suitable
                                         for;
                                     </p>
-                                    <div class="change">
-                                        <div class="Width100perc detailList">
-                                            <div class="Width100perc">When starting your professional career</div>
-                                            <div class="Width100perc">Newly married stage</div>
-                                            <div class="Width100perc">Wanting to start a family</div>
-                                            <div class="Width100perc">Securing your liability</div>
-                                        </div>
-                                        <div class="KnowMore">
-                                            <span>KnowMore</span>
-                                            <span>Close</span>
+                                    <div class="detailList">
+                                        <div class="KnowMoreList">
+                                            <div class="Width100per">When starting your professional career</div>
+                                            <div class="Width100per">Newly married stage</div>
+                                            <div class="Width100per">Wanting to start a family</div>
+                                            <div class="Width100per">Securing your liability</div>
                                         </div>
                                     </div>
                                 </div>
@@ -127,15 +216,143 @@
                     </div>
                 </div>
 
+                <div class="accordion">
+                    <ul class="tabs">
+                        <li class="active" rel="tab1">SUD LIFE <span> E-Wealth Royal</span></li>
+                        <li rel="tab2">SUD LIFE <span>Wealth Creator</span></li>
+                        <li rel="tab3">SUD LIFE <span> Assure Plus</span></li>
+                    </ul>
+                    <div class="tab_container">
+                        <h3 class="d_active tab_drawer_heading" rel="tab1">Tab 1</h3>
+                        <div id="tab1" class="tab_content">
+                            <h2>Tab 1 content</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac metus augue.</p>
+                        </div>
+                        <!-- #tab1 -->
+                        <h3 class="tab_drawer_heading" rel="tab2">Tab 2</h3>
+                        <div id="tab2" class="tab_content">
+                            <h2>Tab 2 content</h2>
+                            <p>Nunc dui velit, scelerisque eu placerat volutpat, dapibus eu nisi. Vivamus eleifend vestibulum odio non vulputate.</p>
+                        </div>
+                        <!-- #tab2 -->
+                        <h3 class="tab_drawer_heading" rel="tab3">Tab 3</h3>
+                        <div id="tab3" class="tab_content">
+                            <h2>Tab 3 content</h2>
+                            <p>Nulla eleifend felis vitae velit tristique imperdiet. Etiam nec imperdiet elit. Pellentesque sem lorem, scelerisque sed facilisis sed, vestibulum sit amet eros.</p>
+                        </div>
+                        <!-- #tab3 -->
+                    </div>
+                    <!-- .tab_container -->
+                </div>
             </div>
+
+            <footer class="FixedFooter">
+                <button class="FooterBtn">Brochure</button>
+                <button class="FooterBtn ">Specimen Policy Doc</button>
+                <button class="FooterBtn RedBtn">Calculate Premium</button>
+            </footer>
         </div>
+
     </div>
+
 
 
     <script src="js/jquery-3-6-0-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
 
+    <script>
+        $(document).ready(function() {
+
+
+                // tab content
+                $(".tab_content").hide();
+                $(".tab_content:first").show();
+
+                /* if in tab mode */
+                $("ul.tabs li").click(function() {
+
+                    $(".tab_content").hide();
+                    var activeTab = $(this).attr("rel");
+                    $("#" + activeTab).fadeIn();
+
+                    $("ul.tabs li").removeClass("active");
+                    $(this).addClass("active");
+
+                    $(".tab_drawer_heading").removeClass("d_active");
+                    $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
+
+                });
+                /* if in drawer mode */
+                $(".tab_drawer_heading").click(function() {
+
+                    $(".tab_content").hide();
+                    var d_activeTab = $(this).attr("rel");
+                    $("#" + d_activeTab).fadeIn();
+
+                    $(".tab_drawer_heading").removeClass("d_active");
+                    $(this).addClass("d_active");
+
+                    $("ul.tabs li").removeClass("active");
+                    $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
+                });
+
+
+                /* Extra class "tab_last" 
+                   to add border to right side
+                   of last tab */
+                $('ul.tabs li').last().addClass("tab_last");
+
+
+                // $("#PlanTabCntnMainDiv1").show();
+                // $(".PlanTabCntnMainDiv .PlanTabDataCntnDiv:nth-child(2)").show();
+
+                // $(".PlanCntnDiv .PlanBox").click(function() {
+                //     $(".PlanCntnDiv .PlanBox").removeClass("PlanBoxActive");
+                //     $(this).addClass("PlanBoxActive");
+
+                //     if ($("#PlanBox1").hasClass("PlanBoxActive")) {
+                //         $(".PlanTabCntnMainDiv").hide();
+                //         $("#PlanTabCntnMainDiv1").show();
+                //     }
+
+                //     if ($("#PlanBox2").hasClass("PlanBoxActive")) {
+                //         $(".PlanTabCntnMainDiv").hide();
+                //         $("#PlanTabCntnMainDiv2").show();
+                //     }
+                //     if ($("#PlanBox3").hasClass("PlanBoxActive")) {
+                //         $(".PlanTabCntnMainDiv").hide();
+                //         $("#PlanTabCntnMainDiv3").show();
+                //     }
+                //     if ($("#PlanBox4").hasClass("PlanBoxActive")) {
+                //         $(".PlanTabCntnMainDiv").hide();
+                //         $("#PlanTabCntnMainDiv4").show();
+                //     }
+                // });
+
+
+                // $(".PlanTabContainer .PlanTabDiv").click(function() {
+                //     $(".PlanTabContainer .PlanTabDiv").removeClass("PlanTabDivActive");
+                //     $(this).addClass("PlanTabDivActive");
+
+                //     if ($("#PlanTab1").hasClass("PlanTabDivActive")) {
+                //         $(".PlanTabDataCntnDiv").hide();
+                //         $("#PlanTabData1").show();
+                //     }
+                //     if ($("#PlanTab2").hasClass("PlanTabDivActive")) {
+                //         $(".PlanTabDataCntnDiv").hide();
+                //         $("#PlanTabData2").show();
+                //     }
+                //     if ($("#PlanTab3").hasClass("PlanTabDivActive")) {
+                //         $(".PlanTabDataCntnDiv").hide();
+                //         $("#PlanTabData3").show();
+                //     }
+                // });
+
+            })
+            //product selection page PlanBox ends
+    </script>
+    </script>
 
 </body>
 
