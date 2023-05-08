@@ -8,108 +8,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-
-    <style>
-        .pageContent .accordion {
-            margin-bottom: 45px;
-        }
-        
-        ul.tabs {
-            margin: 0;
-            padding: 0;
-            float: left;
-            list-style: none;
-            height: 32px;
-            max-width: max-content;
-            position: relative;
-            top: -21px;
-            background: #fff;
-        }
-        
-        ul.tabs li {
-            float: left;
-            margin: 0 10px 0 0;
-            cursor: pointer;
-            padding: 0px 21px;
-            height: 31px;
-            line-height: 31px;
-            background: #EFEFEF 0% 0% no-repeat padding-box;
-            border: 2px solid #EF4123;
-            border-radius: 8px 8px 0px 0px;
-            opacity: 1;
-            background-color: #666;
-            color: #ccc;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        ul.tabs li:last-child {
-            margin-right: 0;
-        }
-        
-        .tab_last {
-            border-right: 1px solid #333;
-        }
-        
-        ul.tabs li:hover {
-            background-color: #ccc;
-            color: #333;
-        }
-        
-        ul.tabs li,
-        ul.tabs li:hover {
-            background-color: #fff;
-            color: #0475BC;
-            border-bottom: 1px solid #fff;
-            display: block;
-        }
-        
-        ul.tabs li span {
-            color: #EF4123
-        }
-        
-        .tab_container {
-            border-top: none;
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            border: 2px solid #EF4123;
-            border-radius: 8px;
-            opacity: 1;
-        }
-        
-        .tab_content {
-            padding: 20px;
-            display: none;
-        }
-        
-        .tab_drawer_heading {
-            display: none;
-        }
-        
-        @media screen and (max-width: 480px) {
-            .tabs {
-                display: none;
-            }
-            .tab_drawer_heading {
-                background-color: #ccc;
-                color: #fff;
-                border-top: 1px solid #333;
-                margin: 0;
-                padding: 5px 20px;
-                display: block;
-                cursor: pointer;
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-            .d_active {
-                background-color: #666;
-                color: #fff;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -134,10 +32,10 @@
 
             <div class="pageContent">
                 <div class="row PlanSelect">
-                    <h3 class="BlueHead Width100per"><strong>SUD life</strong> offers wide range of products which suits your needs. Kindly go through the product categories which suits you best or alternatively you can do your suitability analysis to chose your product. Please
+                    <h3 class="head_txt Width100per"><strong>SUD life</strong> offers wide range of products which suits your needs. Kindly go through the product categories which suits you best or alternatively you can do your suitability analysis to chose your product. Please
                         <a class="RedTxt"><u>click here</u></a> for suitability analysis</h3>
 
-                    <div class="Width100per PlanBoxMainDiv">
+                    <div class="PlanBoxMainDiv">
                         <div class="PlanCntnDiv">
                             <div class="card card1 active">
                                 <div class="Width100per">
@@ -159,7 +57,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card2">
+                            <div class="card card2 cardBlueActive">
                                 <div class="Width100per">
                                     <div class="PlanBoxHead">
                                         <h4>Saving <br>Plan</h4>
@@ -216,31 +114,366 @@
                     </div>
                 </div>
 
+                <!-- Accordion Section -->
                 <div class="accordion">
-                    <ul class="tabs">
-                        <li class="active" rel="tab1">SUD LIFE <span> E-Wealth Royal</span></li>
-                        <li rel="tab2">SUD LIFE <span>Wealth Creator</span></li>
-                        <li rel="tab3">SUD LIFE <span> Assure Plus</span></li>
-                    </ul>
+                    <div class="tabList">
+                        <ul class="tabs">
+                            <li class="active" rel="tab1">SUD LIFE <span> E-Wealth Royal</span></li>
+                            <li rel="tab2">SUD LIFE <span>Wealth Creator</span></li>
+                            <li rel="tab3">SUD LIFE <span> Assure Plus</span></li>
+                        </ul>
+                    </div>
+
+
                     <div class="tab_container">
-                        <h3 class="d_active tab_drawer_heading" rel="tab1">Tab 1</h3>
                         <div id="tab1" class="tab_content">
-                            <h2>Tab 1 content</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac metus augue.</p>
+                            <div class="acc_content">
+                                <a class="ac_section_title" href="#accordion-1">
+                                    <label class="_container">Key Features
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                    <img src="images/ShadowDown.png" class="OpenPlus">
+                                    <!-- <img src="images/ShadowUp.png" class="CloseCross"> -->
+                                </a>
+                                <div id="accordion-1" class="ac_section_content">
+                                    <div class="ac_section_inner">
+                                        <div class="Bluedot"><strong>2 Plan Options</strong> - Platinum and Platinum Plus</div>
+                                        <div class="Bluedot"><strong>Return of Charges<sup>4</sup></strong> – No Premium Allocation charges. Return of Policy Administration charge at the end of 10th Policy Year and Return of Mortality charges at policy Maturity</div>
+                                        <div class="Bluedot"><strong>Flexibility to withdraw money<sup>1</sup></strong> - You can partially withdraw the money as per your requirement after completion of 5th Policy Year.</div>
+                                        <div class="Bluedot"><strong>Investment Strategy</strong> - Option to choose from 2 Investment Strategy i.e. Self-Managed and Age Based and 8 Fund Options i.e. Blue- Chip Equity Fund, Growth Plus Fund, Balanced Plus Fund, Mid Cap Fund,
+                                            Income Fund, Gilt Fund, Dynamic Fund and Money Market Fund</div>
+                                        <div class="Bluedot"><strong>Tax Benefits</strong> - Get tax-free maturity amount subject to Section 10(10D) and tax benefits on premium paid under Section 80 C of the Income Tax Act, 1961.</div>
+                                        <div class="Bluedot"><strong>Flexibility </strong> - Option to increase Premium Payment Term and Policy Term</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="acc_content">
+                                <a class="ac_section_title" href="#accordion-1">
+                                    <label class="_container">Eligibilty Criteria
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                    <img src="images/ShadowDown.png" class="OpenPlus">
+                                    <!-- <img src="images/ShadowUp.png" class="CloseCross"> -->
+                                </a>
+                                <div id="accordion-2" class="ac_section_content">
+                                    <div class="EligibilityCretTable">
+                                        <div class="OverflowScroll">
+                                            <table width="100%" cellpadding="0" cellspacing="0" border="1">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center"><strong>Plan Option</strong></td>
+                                                        <td class="text-center"><strong>Platinum</strong></td>
+                                                        <td class="text-center"><strong>Platinum Plus</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Min Entry Age<sup>*</sup></td>
+                                                        <td>
+                                                            <div class="Width100per">Life Assured - 0 Years (30 Days)</div>
+                                                            <div class="Width100per">Policyholder - 18 Years</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="Width100per">Life Assured - 0 Years (30 Days)</div>
+                                                            <div class="Width100per">Policyholder - 18 Years</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Max Entry Age<sup>*</sup></td>
+                                                        <td>
+                                                            <div class="Width100per">For Life Assured</div>
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">Policy Term</td>
+                                                                        <td class="text-center">Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">10 - 14</td>
+                                                                        <td class="text-center">50 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">15 - 40</td>
+                                                                        <td class="text-center">55 Years</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <div class="Width100per">For Life Assured/Policyholder</div>
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">Policy Term</td>
+                                                                        <td class="text-center">Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">10 - 14</td>
+                                                                        <td class="text-center">50 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">15 - 40</td>
+                                                                        <td class="text-center">55 Years</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="OverflowScroll">
+                                            <table width="100%" cellpadding="0" cellspacing="0" border="1" class="mt-4">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center"><strong>Plan Option</strong></td>
+                                                        <td class="text-center"><strong>Platinum</strong></td>
+                                                        <td class="text-center"><strong>Platinum Plus</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maturity Age<sup>*</sup></td>
+                                                        <td>
+                                                            <div class="Width100per">Minimum - 18 Years</div>
+                                                            <div class="Width100per">Maximum - 75 Years</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="Width100per">Minimum - 18 Years</div>
+                                                            <div class="Width100per">Maximum - 75 Years</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Minimum Policy Term</td>
+                                                        <td>
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">PPT</td>
+                                                                        <td class="text-center">Policy Term</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">5 Pay, 7 Pay, <br>Regular Pay</td>
+                                                                        <td class="text-center">10 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">10 Pay</td>
+                                                                        <td class="text-center">15 Years</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">PPT</td>
+                                                                        <td class="text-center">Policy Term</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">5 Pay, 7 Pay, <br>Regular Pay</td>
+                                                                        <td class="text-center">10 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">10 Pay</td>
+                                                                        <td class="text-center">15 Years</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maximum Policy Term</td>
+                                                        <td>
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">PPT</td>
+                                                                        <td class="text-center">Policy Term</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">5 Pay, 7 Pay, 10 Pay</td>
+                                                                        <td class="text-center">40 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Regular Pay</td>
+                                                                        <td class="text-center">40 Years</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <div class="Width100per">Life Assured is Minor<sup>^</sup></div>
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">PPT</td>
+                                                                        <td class="text-center">Policy Term</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">5 Pay, 7 Pay, 10 Pay</td>
+                                                                        <td class="text-center">40 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Regular Pay</td>
+                                                                        <td class="text-center">30 Years Less Entry Age</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                            <div class="Width100per mt-2">Life Assured is Major<sup>^</sup> (Age &gt;=18)</div>
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">PPT</td>
+                                                                        <td class="text-center">Policy Term</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">5 Pay, 7 Pay, 10 Pay</td>
+                                                                        <td class="text-center">40 Years</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Regular Pay</td>
+                                                                        <td class="text-center">40 Years</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maximum Premium</td>
+                                                        <td>
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">Premium <br>Payment Mode</td>
+                                                                        <td class="text-center">Amount</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Yearly</td>
+                                                                        <td class="text-center"><span>₹</span> 50,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Half Yearly</td>
+                                                                        <td class="text-center"><span>₹</span> 30,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Quaterly</td>
+                                                                        <td class="text-center"><span>₹</span> 15,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Monthly</td>
+                                                                        <td class="text-center"><span>₹</span> 5,000</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">Premium <br>Payment Mode</td>
+                                                                        <td class="text-center">Amount</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Yearly</td>
+                                                                        <td class="text-center"><span>₹</span> 50,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Half Yearly</td>
+                                                                        <td class="text-center"><span>₹</span> 30,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Quaterly</td>
+                                                                        <td class="text-center"><span>₹</span> 15,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center">Monthly</td>
+                                                                        <td class="text-center"><span>₹</span> 5,000</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maximum Annualised <br>Premium</td>
+                                                        <td><span>₹</span> 2,50,000</td>
+                                                        <td><span>₹</span> 2,50,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Minimum Sum Assured</td>
+                                                        <td><span>₹</span> 5,00,000 (10 times of Annualised Premium)</td>
+                                                        <td><span>₹</span> 5,00,000 (10 times of Annualised Premium)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maximum Sum Assured</td>
+                                                        <td><span>₹</span> 25,00,000 (10 times of Annualised Premium)</td>
+                                                        <td><span>₹</span> 25,00,000 (10 times of Annualised Premium)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Premium Payment Frequency</td>
+                                                        <td>Yearly, Half-Yearly, Quaterly, Monthly</td>
+                                                        <td>Yearly, Half-Yearly, Quaterly, Monthly</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <h5 class="Width100per GreyTxt">
+                                            <sup>*</sup>Age is age last birthday<br>
+                                            <sup>*</sup>At date of commencement of policy. Where, Annualized Premium means premium amount payable in a year excluding the taxes, rider premiums and underwriting extra premium on riders, if any.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="acc_content">
+                                <a class="ac_section_title" href="#accordion-3">
+                                    <label class="_container">How it works
+                                        <input type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <img src="images/ShadowDown.png" class="OpenPlus">
+                                </a>
+                                <div id="accordion-3" class="ac_section_content">
+                                    <div class="ac_section_inner">
+                                        <div class="Bluedot"><strong>2 Plan Options</strong> - Platinum and Platinum Plus</div>
+                                        <div class="Bluedot"><strong>Return of Charges<sup>4</sup></strong> – No Premium Allocation charges. Return of Policy Administration charge at the end of 10th Policy Year and Return of Mortality charges at policy Maturity</div>
+                                        <div class="Bluedot"><strong>Flexibility to withdraw money<sup>1</sup></strong> - You can partially withdraw the money as per your requirement after completion of 5th Policy Year.</div>
+                                        <div class="Bluedot"><strong>Investment Strategy</strong> - Option to choose from 2 Investment Strategy i.e. Self-Managed and Age Based and 8 Fund Options i.e. Blue- Chip Equity Fund, Growth Plus Fund, Balanced Plus Fund, Mid Cap Fund,
+                                            Income Fund, Gilt Fund, Dynamic Fund and Money Market Fund</div>
+                                        <div class="Bluedot"><strong>Tax Benefits</strong> - Get tax-free maturity amount subject to Section 10(10D) and tax benefits on premium paid under Section 80 C of the Income Tax Act, 1961.</div>
+                                        <div class="Bluedot"><strong>Flexibility </strong> - Option to increase Premium Payment Term and Policy Term</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- #tab1 -->
-                        <h3 class="tab_drawer_heading" rel="tab2">Tab 2</h3>
+
                         <div id="tab2" class="tab_content">
-                            <h2>Tab 2 content</h2>
-                            <p>Nunc dui velit, scelerisque eu placerat volutpat, dapibus eu nisi. Vivamus eleifend vestibulum odio non vulputate.</p>
+                            <div class="acc_content">
+                                <a class="ac_section_title" href="#accordion-1">
+                                    <label class="_container">How it works
+                                        <input type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <img src="images/ShadowDown.png" class="OpenPlus">
+                                </a>
+                                <div id="accordion-3" class="ac_section_content">
+                                    <div class="ac_section_inner">
+                                        <div class="Bluedot"><strong>2 Plan Options</strong> - Platinum and Platinum Plus</div>
+                                        <div class="Bluedot"><strong>Return of Charges<sup>4</sup></strong> – No Premium Allocation charges. Return of Policy Administration charge at the end of 10th Policy Year and Return of Mortality charges at policy Maturity</div>
+                                        <div class="Bluedot"><strong>Flexibility to withdraw money<sup>1</sup></strong> - You can partially withdraw the money as per your requirement after completion of 5th Policy Year.</div>
+                                        <div class="Bluedot"><strong>Investment Strategy</strong> - Option to choose from 2 Investment Strategy i.e. Self-Managed and Age Based and 8 Fund Options i.e. Blue- Chip Equity Fund, Growth Plus Fund, Balanced Plus Fund, Mid Cap Fund,
+                                            Income Fund, Gilt Fund, Dynamic Fund and Money Market Fund</div>
+                                        <div class="Bluedot"><strong>Tax Benefits</strong> - Get tax-free maturity amount subject to Section 10(10D) and tax benefits on premium paid under Section 80 C of the Income Tax Act, 1961.</div>
+                                        <div class="Bluedot"><strong>Flexibility </strong> - Option to increase Premium Payment Term and Policy Term</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- #tab2 -->
-                        <h3 class="tab_drawer_heading" rel="tab3">Tab 3</h3>
+
                         <div id="tab3" class="tab_content">
-                            <h2>Tab 3 content</h2>
-                            <p>Nulla eleifend felis vitae velit tristique imperdiet. Etiam nec imperdiet elit. Pellentesque sem lorem, scelerisque sed facilisis sed, vestibulum sit amet eros.</p>
+                            <p>Tab 3 content : Nulla eleifend felis vitae velit tristique imperdiet. Etiam nec imperdiet elit. Pellentesque sem lorem, scelerisque sed facilisis sed, vestibulum sit amet eros.</p>
                         </div>
-                        <!-- #tab3 -->
+
                     </div>
                     <!-- .tab_container -->
                 </div>
@@ -264,94 +497,73 @@
     <script>
         $(document).ready(function() {
 
+            // tab content
+            $(".tab_content").hide();
+            $(".tab_content:first").show();
 
-                // tab content
+            /* if in tab mode */
+            $("ul.tabs li").click(function() {
+
                 $(".tab_content").hide();
-                $(".tab_content:first").show();
+                var activeTab = $(this).attr("rel");
+                $("#" + activeTab).fadeIn();
 
-                /* if in tab mode */
-                $("ul.tabs li").click(function() {
+                $("ul.tabs li").removeClass("active");
+                $(this).addClass("active");
 
-                    $(".tab_content").hide();
-                    var activeTab = $(this).attr("rel");
-                    $("#" + activeTab).fadeIn();
+                $(".tab_drawer_heading").removeClass("d_active");
+                $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
 
-                    $("ul.tabs li").removeClass("active");
-                    $(this).addClass("active");
+            });
+            /* if in drawer mode */
+            $(".tab_drawer_heading").click(function() {
 
-                    $(".tab_drawer_heading").removeClass("d_active");
-                    $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
+                $(".tab_content").hide();
+                var d_activeTab = $(this).attr("rel");
+                $("#" + d_activeTab).fadeIn();
 
-                });
-                /* if in drawer mode */
-                $(".tab_drawer_heading").click(function() {
+                $(".tab_drawer_heading").removeClass("d_active");
+                $(this).addClass("d_active");
 
-                    $(".tab_content").hide();
-                    var d_activeTab = $(this).attr("rel");
-                    $("#" + d_activeTab).fadeIn();
+                $("ul.tabs li").removeClass("active");
+                $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
+            });
 
-                    $(".tab_drawer_heading").removeClass("d_active");
-                    $(this).addClass("d_active");
+            $('ul.tabs li').last().addClass("tab_last");
 
-                    $("ul.tabs li").removeClass("active");
-                    $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
-                });
+        });
+        //product selection page PlanBox ends
 
+        const acc = document.querySelectorAll('.acc_content a');
 
-                /* Extra class "tab_last" 
-                   to add border to right side
-                   of last tab */
-                $('ul.tabs li').last().addClass("tab_last");
+        acc.forEach((accordion) => {
+            accordion.addEventListener('click', function() {
 
+                const current = document.querySelector('.ac_section_title.active');
+                if (current) {
+                    current.classList.remove('active');
+                    current.nextElementSibling.style.display = 'none';
+                }
 
-                // $("#PlanTabCntnMainDiv1").show();
-                // $(".PlanTabCntnMainDiv .PlanTabDataCntnDiv:nth-child(2)").show();
-
-                // $(".PlanCntnDiv .PlanBox").click(function() {
-                //     $(".PlanCntnDiv .PlanBox").removeClass("PlanBoxActive");
-                //     $(this).addClass("PlanBoxActive");
-
-                //     if ($("#PlanBox1").hasClass("PlanBoxActive")) {
-                //         $(".PlanTabCntnMainDiv").hide();
-                //         $("#PlanTabCntnMainDiv1").show();
-                //     }
-
-                //     if ($("#PlanBox2").hasClass("PlanBoxActive")) {
-                //         $(".PlanTabCntnMainDiv").hide();
-                //         $("#PlanTabCntnMainDiv2").show();
-                //     }
-                //     if ($("#PlanBox3").hasClass("PlanBoxActive")) {
-                //         $(".PlanTabCntnMainDiv").hide();
-                //         $("#PlanTabCntnMainDiv3").show();
-                //     }
-                //     if ($("#PlanBox4").hasClass("PlanBoxActive")) {
-                //         $(".PlanTabCntnMainDiv").hide();
-                //         $("#PlanTabCntnMainDiv4").show();
-                //     }
-                // });
+                this.classList.toggle('active');
+                this.nextElementSibling.style.display = 'block';
+            });
+        });
 
 
-                // $(".PlanTabContainer .PlanTabDiv").click(function() {
-                //     $(".PlanTabContainer .PlanTabDiv").removeClass("PlanTabDivActive");
-                //     $(this).addClass("PlanTabDivActive");
 
-                //     if ($("#PlanTab1").hasClass("PlanTabDivActive")) {
-                //         $(".PlanTabDataCntnDiv").hide();
-                //         $("#PlanTabData1").show();
-                //     }
-                //     if ($("#PlanTab2").hasClass("PlanTabDivActive")) {
-                //         $(".PlanTabDataCntnDiv").hide();
-                //         $("#PlanTabData2").show();
-                //     }
-                //     if ($("#PlanTab3").hasClass("PlanTabDivActive")) {
-                //         $(".PlanTabDataCntnDiv").hide();
-                //         $("#PlanTabData3").show();
-                //     }
-                // });
+        $("input[name=radio]").focus(function() {
+            document.getElementsByClassName("acc_content").focus();
+        });
+        document.getElementsByClassName("acc_content").focus();
 
-            })
-            //product selection page PlanBox ends
-    </script>
+        ///////////////////////////////////////////////////////
+
+        const link = document.querySelector('a.ac_section_title.active');
+        const img = link.querySelector('img');
+        link.addEventListener('click', () => {
+            img.classList.add('active');
+        });
     </script>
 
 </body>

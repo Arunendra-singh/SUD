@@ -789,10 +789,6 @@ button.btn.loginpage_otp:focus {
 
 /*---------page css---------*/
 
-header {
-    /* overflow: auto; */
-}
-
 div.header {
     position: relative;
     top: 0px;
@@ -857,7 +853,7 @@ a.navbar-brand img.LogoImg {
     padding: 8px 20px;
 }
 
-.PlanSelect .BlueHead {
+.PlanSelect .head_txt {
     color: #0475BC;
     font-size: 18px;
     text-align: center;
@@ -867,7 +863,7 @@ a.navbar-brand img.LogoImg {
     padding: 0 10px;
 }
 
-.PlanSelect .BlueHead a {
+.PlanSelect .head_txt a {
     color: #EF4123;
 }
 
@@ -896,17 +892,8 @@ a.navbar-brand img.LogoImg {
 }
 
 .PlanCntnDiv {
-    align-items: stretch;
-    display: inline-flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    /**/
     width: max-content;
-    /* height: 100%; */
-    height: auto;
+    height: 345px;
     padding: 40px 0px;
     margin: 0px auto;
     margin-bottom: 30px;
@@ -914,45 +901,37 @@ a.navbar-brand img.LogoImg {
     align-items: flex-start;
 }
 
-.PlanCntnDiv.ful_height {
+
+/* .PlanCntnDiv.ful_height {
     height: 100vh;
-}
+} */
 
 .card {
-    /*float: left;*/
-    border: 0;
     flex-shrink: 1;
     width: 320px;
-    height: auto;
+    height: 100%;
     background: rgba(250, 250, 250, 1) 0% 0% no-repeat padding-box;
     box-shadow: 0px 9px 24px rgba(4, 117, 188, 0.44);
     border-radius: 8px;
     padding: 15px;
     margin: 0 10px;
-    /* border: 5px solid rgba(250, 250, 250, 1); */
+    position: relative;
     display: inline-block;
     cursor: pointer;
-    position: relative;
+    transition: 0.5s ease-out all;
     padding-bottom: 35px;
+    border: 5px solid rgba(250, 250, 250, 1);
 }
 
-.card .Width100per {
+
+/* .card .Width100per {
     min-height: 200px;
-}
+} */
 
 .card.cardBlueActive {
-    position: relative;
-    height: auto;
-    width: 320px;
     background-color: #0475BC;
-    color: #fff;
     z-index: 999;
-    border-radius: 8px;
-    padding: 0px 15px;
-    padding-top: 15px;
-    left: 0px;
-    /* border-bottom-right-radius: 8px; */
-    box-shadow: 0px 9px 24px rgb(4 117 188 / 44%);
+    height: auto;
 }
 
 .PlanBoxHead h4 {
@@ -966,6 +945,13 @@ a.navbar-brand img.LogoImg {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+
+.PlanBoxTxt {
+    font-size: 13px;
+    color: #000;
+    text-align: left;
+    margin-bottom: 0px;
 }
 
 .card.active {
@@ -1037,6 +1023,406 @@ a.navbar-brand img.LogoImg {
     text-align: left;
 }
 
+.KnowMoreList>DIV:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    margin-top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.cardBlueActive .card h4,
+.cardBlueActive .PlanBoxTxt,
+.cardBlueActive .KnowMoreList,
+.cardBlueActive .PlanKnowMore {
+    color: #fff;
+}
+
+.acc_content {
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding: 5px 10px;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    background: transparent 0% 0% no-repeat padding-box;
+    box-shadow: -1px 6px 3px #00000017;
+    border: 1px solid #FAFAFA;
+    border-radius: 16px;
+}
+
+.pageContent .accordion {
+    margin-bottom: 45px;
+}
+
+.pageContent .accordion {
+    box-shadow: -1px 6px 3px #00000017;
+    border: 1px solid #FAFAFA;
+    border-radius: 16px;
+    width: 100%;
+    float: left;
+}
+
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 60px;
+    max-width: max-content;
+    position: relative;
+    top: 10px;
+    background: #fff;
+}
+
+ul.tabs li {
+    /* float: left; */
+    margin: 0 10px 0 0;
+    padding: 15px 5px;
+    width: auto;
+    float: left;
+    height: 60px;
+    line-height: 31px;
+    border-radius: 8px 8px 0px 0px;
+    border: 2px solid #EF4123;
+    border-bottom: 0px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    color: #0475bc;
+    background: rgba(239, 239, 239, 1) 0% 0% no-repeat padding-box;
+    margin-right: 5px;
+    font-size: 14px;
+    font-family: 'poppinsMedium';
+    font-weight: 500;
+}
+
+ul.tabs li:last-child {
+    margin-right: 0;
+}
+
+.tab_last {
+    border-right: 1px solid #333;
+}
+
+ul.tabs li.active,
+ul.tabs li:hover {
+    background-color: #fff;
+    color: #0475BC;
+    border-bottom: 1px solid #fff;
+    display: block;
+}
+
+ul.tabs li span {
+    color: #EF4123
+}
+
+.tab_container {
+    border-top: none;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #EF4123;
+    border-radius: 8px;
+    opacity: 1;
+    width: 100%;
+    clear: both;
+}
+
+.tab_content {
+    padding: 20px;
+    display: none;
+    box-shadow: -1px 6px 3px #00000017;
+    border: 1px solid #FAFAFA;
+    border-radius: 10px;
+    /* width: 98%; */
+    margin: 0 auto;
+    z-index: 999;
+}
+
+a.ac_section_title {
+    font-size: 14px;
+    padding: 5px 10px;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    color: #0475BC;
+    background: transparent 0% 0% no-repeat padding-box;
+    /* box-shadow: -1px 6px 3px #00000017;
+    border: 1px solid #FAFAFA;
+    border-radius: 16px; */
+}
+
+.ac_section_content {
+    display: none;
+}
+
+.ac_section_title input[type="radio"] {
+    display: none;
+}
+
+.ac_section_title span.checkmark {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.OpenPlus {
+    width: 25px;
+    height: 25px;
+}
+
+.ac_section_title.active .OpenPlus {
+    transform: rotate(180deg);
+}
+
+.acc_content {
+    margin-bottom: 15px;
+}
+
+label._container {
+    position: relative;
+    padding-left: 35px;
+    user-select: none;
+    width: 95%;
+    margin-left: 5px;
+}
+
+
+/* Hide the browser's default radio button */
+
+._container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+
+span.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: inset -5px -1px 6px #0000004D;
+    border: 1px solid #0475BC;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+._container input:checked~.checkmark {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: inset -5px -1px 6px #0000004D;
+    border: 1px solid #0475BC;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+
+._container input:checked~.checkmark:after {
+    display: block;
+}
+
+._container .checkmark:after {
+    content: "";
+    background: #0475BC 0% 0% no-repeat padding-box;
+    border: 1px solid #0475BC;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 3px;
+    right: 0px;
+    top: 3px;
+    border-radius: 50%;
+}
+
+.ac_section_content {
+    background-color: white;
+    padding: 0 20px;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.ac_section_content.active {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+.Bluedot {
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.Bluedot:before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #0475BC;
+}
+
+.ac_section_content .ac_section_inner {
+    width: 95%;
+    margin-left: 24px;
+    margin-top: 10px;
+}
+
+.EligibilityCretTable .OverflowScroll {
+    overflow: auto;
+    width: 100%;
+}
+
+.EligibilityCretTable table,
+.EligibilityCretTable table td {
+    border: 1px solid #000;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.EligibilityCretTable .GreyTxt {
+    font-size: 12px;
+    color: #687d8a;
+    margin-top: 10px;
+}
+
+.EligibilityCretTable .OverflowScroll:last-child {
+    margin-bottom: 5px;
+}
+
+tr td span {
+    font-weight: 600;
+    font-family: 'poppinsMedium';
+}
+
+@media screen and (max-width: 768px) {
+    .PlanSelect .BlueHead {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 681px) and (max-width: 768px) {
+    label._container {
+        width: 93%;
+    }
+}
+
+@media screen and (min-width: 581px) and (max-width: 680px) {
+    label._container {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ul.tabs li {
+        margin: 0 10px 0 0;
+        padding: 10px 4px;
+        height: 55px;
+        line-height: 30px;
+        font-size: 12px;
+        top: 5px;
+    }
+    label._container {
+        width: 91%;
+        font-size: 12px;
+    }
+    .PlanSelect .head_txt {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+    .PlanBoxHead h4 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    ul.tabs li {
+        font-size: 10px;
+        height: 50px;
+        top: 10px;
+    }
+    label._container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    label._container {
+        position: relative;
+        padding-left: 35px;
+        user-select: none;
+        margin-left: 5px;
+    }
+    /* .tabs {
+        display: none;
+    } */
+    .tab_drawer_heading {
+        background-color: #ccc;
+        color: #fff;
+        border-top: 1px solid #333;
+        margin: 0;
+        padding: 5px 20px;
+        display: block;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .d_active {
+        background-color: #666;
+        color: #fff;
+    }
+    label._container {
+        width: 86%;
+    }
+    button.FooterBtn {
+        min-width: 140px !important;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    ul.tabs li {
+        font-size: 8px;
+        height: 40px;
+        top: 20px;
+    }
+}
+
+.acc_content.active .ac_section_content {
+    display: block;
+}
+
 
 /*----------Footer------------*/
 
@@ -1045,6 +1431,7 @@ footer.FixedFooter {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
     background: transparent linear-gradient(180deg, #FFFFFF 0%, #EDEDED 47%, #D4D4D4 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #C8C8C8;
     opacity: 1;
@@ -1055,9 +1442,14 @@ button.FooterBtn {
     border: 2px solid #ED412D;
     border-radius: 8px;
     opacity: 1;
-    padding: 10px 15px;
-    min-width: 240px;
+    padding: 10px 10px;
+    min-width: 174px;
     color: #000000;
+}
+
+button.FooterBtn.RedBtn {
+    background: #ED412D;
+    color: #fff;
 }
 
 @media only screen and (max-width: 480px) {
