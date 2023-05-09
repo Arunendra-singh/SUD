@@ -1,4 +1,27 @@
 $(document).ready(function() {
+    //product selection page PlanBox
+
+
+    // tab content
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    /* if in tab mode */
+    $("ul.tabs li").click(function() {
+
+        $(".tab_content").hide();
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn();
+
+        $("ul.tabs li").removeClass("active");
+        $(this).addClass("active");
+
+    });
+
+    $('ul.tabs li').last().addClass("tab_last");
+
+
+    /*******************************************/
 
     //for card selection on hover 
 
@@ -8,9 +31,12 @@ $(document).ready(function() {
             $(this).toggleClass('cardBlueActive');
 
             if ($('.PlanCntnDiv .card').hasClass("cardBlueActive")) {
-                $(this).parent().addClass('ful_height');
+                $(this).nextsibling().addClass('active');
+                $(this).parent().parent().addClass('ful_height');
+
             } else {
-                $(this).parent().removeClass('ful_height');
+                $(this).nextsibling().removeClass('active');
+                $(this).parent().parent().removeClass('ful_height');
             }
         }
     );

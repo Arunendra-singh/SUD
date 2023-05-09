@@ -37,7 +37,7 @@
 
                     <div class="PlanBoxMainDiv">
                         <div class="PlanCntnDiv">
-                            <div class="card card1 active">
+                            <div class="card card1">
                                 <div class="Width100per">
                                     <div class="PlanBoxHead">
                                         <h4>ULIP Investment <br>Plan</h4>
@@ -74,7 +74,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card3">
+                            <div class="card card3 ">
                                 <div class="Width100per">
                                     <div class="PlanBoxHead">
                                         <h4>Retirement <br>Plan</h4>
@@ -115,7 +115,7 @@
                 </div>
 
                 <!-- Accordion Section -->
-                <div class="accordion">
+                <div class="pro_page accordion">
                     <div class="tabList">
                         <ul class="tabs">
                             <li class="active" rel="tab1">SUD LIFE <span> E-Wealth Royal</span></li>
@@ -495,45 +495,6 @@
     <script src="js/main.js"></script>
 
     <script>
-        $(document).ready(function() {
-
-            // tab content
-            $(".tab_content").hide();
-            $(".tab_content:first").show();
-
-            /* if in tab mode */
-            $("ul.tabs li").click(function() {
-
-                $(".tab_content").hide();
-                var activeTab = $(this).attr("rel");
-                $("#" + activeTab).fadeIn();
-
-                $("ul.tabs li").removeClass("active");
-                $(this).addClass("active");
-
-                $(".tab_drawer_heading").removeClass("d_active");
-                $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
-
-            });
-            /* if in drawer mode */
-            $(".tab_drawer_heading").click(function() {
-
-                $(".tab_content").hide();
-                var d_activeTab = $(this).attr("rel");
-                $("#" + d_activeTab).fadeIn();
-
-                $(".tab_drawer_heading").removeClass("d_active");
-                $(this).addClass("d_active");
-
-                $("ul.tabs li").removeClass("active");
-                $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
-            });
-
-            $('ul.tabs li').last().addClass("tab_last");
-
-        });
-        //product selection page PlanBox ends
-
         const acc = document.querySelectorAll('.acc_content a');
 
         acc.forEach((accordion) => {
@@ -558,12 +519,6 @@
         document.getElementsByClassName("acc_content").focus();
 
         ///////////////////////////////////////////////////////
-
-        const link = document.querySelector('a.ac_section_title.active');
-        const img = link.querySelector('img');
-        link.addEventListener('click', () => {
-            img.classList.add('active');
-        });
     </script>
 
 </body>

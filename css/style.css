@@ -57,6 +57,10 @@ body {
 
 /*================================*/
 
+.logo {
+    float: left;
+}
+
 main.login_page {
     background-image: url('../imgs/LoginBg.png');
     float: left;
@@ -802,10 +806,6 @@ div.header {
     -webkit-box-shadow: 0px 3px 20px #0000001A;
 }
 
-.logo {
-    float: left;
-}
-
 .logo a {
     border-right: 1px solid #0000001A;
     width: 171px;
@@ -851,6 +851,17 @@ a.navbar-brand img.LogoImg {
 
 .pageContent {
     padding: 8px 20px;
+}
+
+.PlanBoxMainDiv.ful_height {
+    height: 100vh;
+}
+
+.PlanBoxMainDiv {
+    box-sizing: border-box;
+    overflow: hidden;
+    height: auto;
+    overflow-x: scroll;
 }
 
 .PlanSelect .head_txt {
@@ -932,6 +943,7 @@ a.navbar-brand img.LogoImg {
     background-color: #0475BC;
     z-index: 999;
     height: auto;
+    border: 5px solid #fff;
 }
 
 .PlanBoxHead h4 {
@@ -1041,7 +1053,7 @@ a.navbar-brand img.LogoImg {
     color: #fff;
 }
 
-.acc_content {
+.pro_page .acc_content {
     margin-bottom: 15px;
     font-size: 14px;
     padding: 5px 10px;
@@ -1055,11 +1067,11 @@ a.navbar-brand img.LogoImg {
     border-radius: 16px;
 }
 
-.pageContent .accordion {
+.pageContent .pro_page.accordion {
     margin-bottom: 45px;
 }
 
-.pageContent .accordion {
+.pageContent .pro_page.accordion {
     box-shadow: -1px 6px 3px #00000017;
     border: 1px solid #FAFAFA;
     border-radius: 16px;
@@ -1181,7 +1193,7 @@ a.ac_section_title {
     transform: rotate(180deg);
 }
 
-.acc_content {
+.pro_page .acc_content {
     margin-bottom: 15px;
 }
 
@@ -1419,7 +1431,7 @@ tr td span {
     }
 }
 
-.acc_content.active .ac_section_content {
+.pro_page .acc_content.active .ac_section_content {
     display: block;
 }
 
