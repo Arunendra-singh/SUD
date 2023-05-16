@@ -861,7 +861,10 @@ a.navbar-brand img.LogoImg {
     box-sizing: border-box;
     overflow: hidden;
     height: auto;
-    overflow-x: scroll;
+    overflow-x: auto;
+    height: 900px;
+    width: 100%;
+    float: left;
 }
 
 .PlanSelect .head_txt {
@@ -907,7 +910,7 @@ a.navbar-brand img.LogoImg {
     height: 345px;
     padding: 40px 0px;
     margin: 0px auto;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     display: flex;
     align-items: flex-start;
 }
@@ -930,7 +933,6 @@ a.navbar-brand img.LogoImg {
     display: inline-block;
     cursor: pointer;
     transition: 0.5s ease-out all;
-    padding-bottom: 35px;
     border: 5px solid rgba(250, 250, 250, 1);
 }
 
@@ -1013,6 +1015,7 @@ a.navbar-brand img.LogoImg {
     font-family: 'poppinsRegular';
     position: relative;
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .Width100perc {
@@ -1053,6 +1056,26 @@ a.navbar-brand img.LogoImg {
     color: #fff;
 }
 
+.PlanKnowMore {
+    display: none;
+}
+
+.PlanKnowMore {
+    width: auto;
+    float: left;
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: poppinsBold;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    color: #000;
+}
+
+.card.cardBlueActive .PlanKnowMore {
+    bottom: 5px;
+}
+
 .pro_page .acc_content {
     margin-bottom: 15px;
     font-size: 14px;
@@ -1068,15 +1091,17 @@ a.navbar-brand img.LogoImg {
 }
 
 .pageContent .pro_page.accordion {
-    margin-bottom: 45px;
+    margin-bottom: 15px;
 }
 
 .pageContent .pro_page.accordion {
-    box-shadow: -1px 6px 3px #00000017;
-    border: 1px solid #FAFAFA;
+    /* box-shadow: -1px 6px 3px #00000017; */
+    /* border: 2px solid #EF4123; */
+    border-radius: 8px;
     border-radius: 16px;
     width: 100%;
     float: left;
+    margin-top: -535px;
 }
 
 ul.tabs {
@@ -1084,10 +1109,9 @@ ul.tabs {
     padding: 0;
     float: left;
     list-style: none;
-    height: 60px;
+    height: auto;
     max-width: max-content;
     position: relative;
-    top: 10px;
     background: #fff;
 }
 
@@ -1112,7 +1136,7 @@ ul.tabs li {
     background: rgba(239, 239, 239, 1) 0% 0% no-repeat padding-box;
     margin-right: 5px;
     font-size: 14px;
-    font-family: 'poppinsMedium';
+    font-family: 'poppinsBold';
     font-weight: 500;
 }
 
@@ -1132,13 +1156,17 @@ ul.tabs li:hover {
     display: block;
 }
 
+.pageContent .pro_page.accordion ul.tabs li {
+    top: 0;
+}
+
 ul.tabs li span {
     color: #EF4123
 }
 
 .tab_container {
     border-top: none;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    /* background: #FFFFFF 0% 0% no-repeat padding-box; */
     border: 2px solid #EF4123;
     border-radius: 8px;
     opacity: 1;
@@ -1149,17 +1177,17 @@ ul.tabs li span {
 .tab_content {
     padding: 20px;
     display: none;
-    box-shadow: -1px 6px 3px #00000017;
-    border: 1px solid #FAFAFA;
     border-radius: 10px;
     /* width: 98%; */
     margin: 0 auto;
-    z-index: 999;
+    z-index: 0;
+    position: relative;
+    margin-top: 10px;
 }
 
 a.ac_section_title {
     font-size: 14px;
-    padding: 5px 10px;
+    padding: 0px 10px;
     text-decoration: none;
     width: 100%;
     display: inline-block;
@@ -1180,29 +1208,28 @@ a.ac_section_title {
 }
 
 .ac_section_title span.checkmark {
-    border-radius: 10px;
+    /* border-radius: 20px; */
     margin-right: 10px;
 }
 
 .OpenPlus {
     width: 25px;
     height: 25px;
+    float: right;
 }
 
 .ac_section_title.active .OpenPlus {
     transform: rotate(180deg);
 }
 
-.pro_page .acc_content {
-    margin-bottom: 15px;
-}
-
 label._container {
     position: relative;
     padding-left: 35px;
     user-select: none;
-    width: 95%;
+    width: 99%;
     margin-left: 5px;
+    font-family: 'poppinsMedium';
+    font-size: 16px;
 }
 
 
@@ -1219,14 +1246,10 @@ label._container {
 
 span.checkmark {
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: inset -5px -1px 6px #0000004D;
@@ -1237,8 +1260,8 @@ span.checkmark {
 /* When the radio button is checked, add a blue background */
 
 ._container input:checked~.checkmark {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: inset -5px -1px 6px #0000004D;
@@ -1262,12 +1285,12 @@ span.checkmark {
     content: "";
     background: #0475BC 0% 0% no-repeat padding-box;
     border: 1px solid #0475BC;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     position: absolute;
-    left: 3px;
+    left: 2px;
     right: 0px;
-    top: 3px;
+    top: 2.5px;
     border-radius: 50%;
 }
 
@@ -1334,105 +1357,35 @@ tr td span {
     font-family: 'poppinsMedium';
 }
 
-@media screen and (max-width: 768px) {
-    .PlanSelect .BlueHead {
-        font-size: 16px;
-        margin-bottom: 0px;
-    }
+img.ColorImg.imghide {
+    display: none;
 }
 
-@media screen and (min-width: 681px) and (max-width: 768px) {
-    label._container {
-        width: 93%;
-    }
+img.WhiteImg.imgshow {
+    display: block;
 }
 
-@media screen and (min-width: 581px) and (max-width: 680px) {
-    label._container {
-        width: 92%;
-    }
+.tabList {
+    width: 100%;
+    float: left;
+    overflow-y: auto;
+    margin-bottom: -18px;
+    z-index: 99;
+    position: relative;
 }
 
-@media screen and (max-width: 600px) {
-    ul.tabs li {
-        margin: 0 10px 0 0;
-        padding: 10px 4px;
-        height: 55px;
-        line-height: 30px;
-        font-size: 12px;
-        top: 5px;
-    }
-    label._container {
-        width: 91%;
-        font-size: 12px;
-    }
-    .PlanSelect .head_txt {
-        font-size: 14px;
-        margin-bottom: 0px;
-    }
-    .PlanBoxHead h4 {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 520px) {
-    ul.tabs li {
-        font-size: 10px;
-        height: 50px;
-        top: 10px;
-    }
-    label._container {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    label._container {
-        position: relative;
-        padding-left: 35px;
-        user-select: none;
-        margin-left: 5px;
-    }
-    /* .tabs {
-        display: none;
-    } */
-    .tab_drawer_heading {
-        background-color: #ccc;
-        color: #fff;
-        border-top: 1px solid #333;
-        margin: 0;
-        padding: 5px 20px;
-        display: block;
-        cursor: pointer;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    .d_active {
-        background-color: #666;
-        color: #fff;
-    }
-    label._container {
-        width: 86%;
-    }
-    button.FooterBtn {
-        min-width: 140px !important;
-    }
-}
-
-@media screen and (max-width: 440px) {
-    ul.tabs li {
-        font-size: 8px;
-        height: 40px;
-        top: 20px;
-    }
+ul.tabs {
+    width: max-content;
+    float: left;
+    background: #fff;
 }
 
 .pro_page .acc_content.active .ac_section_content {
     display: block;
+}
+
+.tab_container {
+    margin-bottom: 60px;
 }
 
 
@@ -1448,6 +1401,11 @@ footer.FixedFooter {
     border: 1px solid #C8C8C8;
     opacity: 1;
     padding: 24px 0;
+    position: fixed!important;
+    bottom: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
 }
 
 button.FooterBtn {
@@ -1455,8 +1413,10 @@ button.FooterBtn {
     border-radius: 8px;
     opacity: 1;
     padding: 10px 10px;
-    min-width: 174px;
+    width: 174px;
     color: #000000;
+    font-family: 'poppinsMedium';
+    font-weight: 600;
 }
 
 button.FooterBtn.RedBtn {
@@ -1464,7 +1424,146 @@ button.FooterBtn.RedBtn {
     color: #fff;
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
+    span.checkmark {
+        width: 18px;
+        height: 18px;
+    }
+    ._container input:checked~.checkmark {
+        width: 18px;
+        height: 18px;
+    }
+    ._container .checkmark:after {
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        left: 2.5px;
+        right: 0px;
+        top: 2.5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .PlanSelect .BlueHead {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    .tab_content {
+        padding: 5px 10px;
+    }
+    .tab_container {
+        margin-top: 30px;
+    }
+    .tab_content {
+        margin-top: 15px;
+    }
+    footer.FixedFooter {
+        padding: 15px 0;
+    }
+    button.FooterBtn {
+        padding: 10px 5px;
+        width: 140px;
+        font-size: 12px;
+    }
+    .PlanKnowMore {
+        display: block;
+    }
+    .PlanKnowMore span:last-child {
+        display: none;
+    }
+    .cardBlueActive .PlanKnowMore span:first-child {
+        display: none;
+    }
+    .cardBlueActive .PlanKnowMore span:last-child {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ul.tabs li {
+        margin: 0 10px 0 0;
+        padding: 10px 4px;
+        height: 55px;
+        line-height: 30px;
+        font-size: 12px;
+        top: 5px;
+    }
+    label._container {
+        font-size: 13px;
+    }
+    .PlanSelect .head_txt {
+        font-size: 13px;
+        margin-bottom: 0px;
+    }
+    .PlanBoxHead h4 {
+        font-size: 14px;
+    }
+    .PlanBoxTxt {
+        font-size: 12px;
+    }
+    span.checkmark {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+    }
+    ._container .checkmark:after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        left: 2px;
+        top: 2px;
+    }
+    .pro_page .acc_content {
+        padding: 5px 0px;
+    }
+    a.ac_section_title {
+        font-size: 14px;
+        padding: 0px 20px;
+    }
+    .ac_section_content {
+        padding: 0 30px;
+    }
+    .Bluedot,
+    .EligibilityCretTable table,
+    .EligibilityCretTable table td {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    ul.tabs li {
+        height: 50px;
+        top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    label._container {
+        position: relative;
+        padding-left: 35px;
+        user-select: none;
+        margin-left: 5px;
+    }
+    /* .tabs {
+        display: none;
+    } */
+    .card {
+        flex-shrink: 1;
+        width: 254px;
+    }
+    .d_active {
+        background-color: #666;
+        color: #fff;
+    }
+    button.FooterBtn {
+        padding: 0px !important;
+        width: 92px;
+        font-size: 12px;
+        min-height: 44px;
+        word-wrap: break-word;
+    }
     a.navbar-brand img {
         width: 140px;
     }
@@ -1484,9 +1583,23 @@ button.FooterBtn.RedBtn {
     .Talktoexpert img.HeadHomeImg {
         margin: 10px 8px;
     }
+    footer.FixedFooter {
+        padding: 10px 5px;
+    }
 }
 
-@media only screen and (max-width: 360px) {
+@media screen and (max-width: 440px) {
+    ul.tabs li {
+        /* font-size: 8px; */
+        height: 40px;
+        padding: 6px 4px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    a.ac_section_title {
+        padding: 5px 5px;
+    }
     .logo a {
         width: 130px;
     }
@@ -1502,4 +1615,18 @@ button.FooterBtn.RedBtn {
     .Talktoexpert img.HeadHomeImg {
         margin: 10px 8px;
     }
+    .ac_section_content {
+        padding: 0 15px;
+    }
+    footer.FixedFooter {
+        gap: 15px;
+    }
+}
+
+.accordion {
+    display: none;
+}
+
+.accordion.active-accordion {
+    display: block;
 }

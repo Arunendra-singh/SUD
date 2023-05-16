@@ -1,138 +1,660 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Accordion By Webdevtrick.com</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META Http-Equiv="Cache-Control" Content="no-cache">
+    <META Http-Equiv="Pragma" Content="no-cache">
+    <META Http-Equiv="Expires" Content="0">
+    <link href="style.css" rel="stylesheet" />
+    <link href="/Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="jquery.dataTables.css" rel="stylesheet" />
+    <link href="dataTables.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
 
-    <style>
-        .container {
-            width: 80%;
-            max-width: 600px;
-            margin: 50px auto;
+    <script src="/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="/Scripts/jquery-3.4.1.js"></script>
+    <script src="/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="/Scripts/jquery.dataTables.min.js"></script>
+    <script src="/Scripts/dataTables.select.min.js"></script>
+    <script src="/Scripts/moment-with-locales.js"></script>
+    <script src="/Scripts/bootstrap-datetimepicker.js"></script>
+    <script src="/Scripts/Common.js"></script>
+
+    <style type="text/css">
+        .required {
+            color: red;
         }
         
-        .accordion {
-            width: 100%;
-            background-color: whitesmoke;
-            border: none;
-            outline: none;
-            text-align: left;
-            padding: 15px 20px;
-            font-size: 18px;
-            color: #333;
-            cursor: pointer;
-            transition: background-color 0.2s linear;
+        .PV-CV-Bottom-Menu-Div .Menu-Box.Half-Btn {
+            width: 48%;
+            margin: 0px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 0px;
+            background: #ed1c24;
+            color: #fff;
         }
         
-        .accordion:after {
-            content: '\f055';
-            font-family: "fontawesome";
-            font-size: 14px;
-            float: right;
+        .mrLeft {
+            margin-left: 0;
         }
         
-        .accordion.is-open:after {
-            content: '\f056';
+        .mrLeft5px {
+            margin-left: 5px;
         }
         
-        .accordion:hover,
-        .accordion.is-open {
-            background-color: #ddd;
+        .mrBtm15px {
+            margin-bottom: 15px;
+            ;
         }
         
-        .accordion-content {
-            background-color: white;
-            border-left: 1px solid whitesmoke;
-            border-right: 1px solid whitesmoke;
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-in-out;
-        }
-        
-        input[type="radio"] {
-            display: none;
-        }
-        
-        .checkmark:after {
-            content: "";
-            position: absolute;
+        .Txt-Box-Info.txt-center {
+            text-align: center;
         }
     </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            debugger;
+            CheckClaimUserAlreadyLogin();
+        });
+    </script>
+
 </head>
 
 <body>
-    <!-- content starts here -->
-    <div class="container">
-        <h1>Simple Accordions | WebDevTrick.com</h1>
 
-        <button class="accordion">First Accordion</button>
-        <div class="accordion-content">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?
-            </p>
-        </div>
+    <div id="divLoader" style="display:none">
+        <div class="Loader-Box"></div>
+        <div class="loader-icon"></div>
+    </div>
+    <div id="ContentModel" style="display:none;">
+        <div class="common_tablePopUp">
+            <div class="common_tableCellPopUp">
+                <div class="content" id="ContentModelDiv">
 
-
-        <button class="accordion">Second Accordion</button>
-        <div class="accordion-content">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?
-            </p>
-        </div>
-
-
-
-        <div class="acc_content ">
-            <a class="ac_section_title accordion" href="#accordion-1">
-                <label class="_container">How it works
-                    <input type="radio" name="radio">
-                    <span class="checkmark"></span>
-                </label>
-                <img src="images/ShadowDown.png" class="OpenPlus">
-                <!-- <img src="images/ShadowUp.png" class="CloseCross"> -->
-            </a>
-            <div id="accordion-3" class="ac_section_content accordion-content">
-                <div class="Width100per BlueCircleList">
-                    <div class="BlueCircleLi"><strong>2 Plan Options</strong> - Platinum and Platinum Plus</div>
-                    <div class="BlueCircleLi"><strong>Return of Charges<sup>4</sup></strong> – No Premium Allocation charges. Return of Policy Administration charge at the end of 10th Policy Year and Return of Mortality charges at policy Maturity</div>
-                    <div class="BlueCircleLi"><strong>Flexibility to withdraw money<sup>1</sup></strong> - You can partially withdraw the money as per your requirement after completion of 5th Policy Year.</div>
-                    <div class="BlueCircleLi"><strong>Investment Strategy</strong> - Option to choose from 2 Investment Strategy i.e. Self-Managed and Age Based and 8 Fund Options i.e. Blue- Chip Equity Fund, Growth Plus Fund, Balanced Plus Fund, Mid Cap Fund, Income Fund, Gilt
-                        Fund, Dynamic Fund and Money Market Fund</div>
-                    <div class="BlueCircleLi"><strong>Tax Benefits</strong> - Get tax-free maturity amount subject to Section 10(10D) and tax benefits on premium paid under Section 80 C of the Income Tax Act, 1961.</div>
-                    <div class="BlueCircleLi"><strong>Flexibility </strong> - Option to increase Premium Payment Term and Policy Term</div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- contend ends here -->
-    <script src="function.js"></script>
+    <div class="common_tablePopUp" id="AlertModel" style="display:none;">
+        <div class="common_tableCellPopUp">
+            <div class="content">
+                <div class="Alert-Msg">
+                    <div class="Info-Txt" id="textMsgAlertModel"></div>
+                </div>
+                <div class="PV-CV-Bottom-Menu-Div">
+
+                    <a href="javascript:void(0)" class="Menu-Box Full-Btn" id="popClose">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="common_tablePopUp" id="ConfirmModel" style="display:none;z-index:99999 !important;">
+        <div class="common_tableCellPopUp">
+            <div class="content">
+                <div class="Alert-Msg">
+                    <div class="Info-Txt" id="textMsgCnfModel"></div>
+                </div>
+                <div class="PV-CV-Bottom-Menu-Div">
+                    <a href="javascript:void(0)" class="Menu-Box Half-Btn" id="btnYesCM">Yes</a>
+                    <a href="javascript:void(0)" class="Menu-Box Half-Btn" id="btnNoCM">No</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header PR">
+        <div class="Div-1024px">
+            <div class="logo FL ">
+                <a href='/AssignInspection/LoadBlankView'><img src="/Content/images/logo.png"></a>
+            </div>
+
+
+            <div class="Auto-logo" id="btnLogout1"><a href='/Login/Logout'><i class="fa fa-power-off" style="color:black"></i></a></div>
+            <div class="RT">Welcome - ADROIT INSPECTION SERVICES PVT. LTD</div>
+
+
+
+        </div>
+    </div>
+    <div class="Container-Div">
+
+
+
+        <div class="Menu-Div">
+
+            <div class="">
+                <ul class='dropdown'>
+                    <li id="top">
+                        <a href='#'>Masters</a>
+                        <span></span>
+                        <ul class="dropdown-box">
+
+
+
+
+                            <li><a href='/SubUser/SubUser'>Sub User</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="">
+                <ul class='dropdown'>
+                    <li id="top">
+                        <a href='#'>Pre-Inspection</a>
+                        <span></span>
+                        <ul class="dropdown-box">
+
+
+
+                            <li><a href='/UploadInspectionDocuments/TableView?filtertype=old'>Upload Inspection Data</a></li>
+
+                            <li><a href='/Invoice/Index'>Print Invoice</a></li>
+
+
+                            <li id="9"><a href='/InspectionMIS/Index?search=1' id="Evaluate1">View Inspection Status</a></li>
+                            <li id="9"><a href='/UploadProcessDocuments/ViewProcessDocuments?search=1' id="Evaluate1">Download Process Documents</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <input type="hidden" value="" id="hdnFlag" />
+            <div class="">
+                <ul class='dropdown'>
+                    <li id="top">
+                        <a href='#'>Claim</a>
+                        <span></span>
+                        <ul class="dropdown-box">
+
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <link href="/Content/css/style.css" rel="stylesheet" />
+        <link href="/Content/css/font-awesome.css" rel="stylesheet" />
+        <link href="/Content/jquery.dataTables.css" rel="stylesheet" />
+        <link href="/Content/select.dataTables.min.css" rel="stylesheet" />
+        <link href="/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+        <script src="/Scripts/jquery-3.3.1.min.js"></script>
+        <script src="/Scripts/jquery-3.4.1.js"></script>
+        <script src="/Scripts/jquery-3.4.1.min.js"></script>
+        <script src="/Scripts/jquery.dataTables.min.js"></script>
+        <script src="/Scripts/dataTables.select.min.js"></script>
+        <script src="/Scripts/moment-with-locales.js"></script>
+        <script src="/Scripts/bootstrap-datetimepicker.js"></script>
+        <script src="/Scripts/Common.js"></script>
+
+        <link href="/Content/css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+        <link href="/Content/css/datepicker.css" rel="stylesheet" />
+
+
+        <form action="/UploadInspectionDocuments/SendInspectionStatus" autocomplete="Off" enctype="multipart/form-data" id="frmUploadInspDocumentsMulti" method="post" name="frmUploadInspDocumentsMulti"><input name="__RequestVerificationToken" type="hidden" value="rTdRz5RVa2nlCFzOIvYxQskt4l-cxJDFkA8tvDWx3MqH7oS9eLYKbtejFTXi0s71nrtFWT5yZIzugZFtvxQH_sEuIw6_JalJM11SiF3fSCE1" />
+            <div class="S_10_Table_Div Btm0px clsWrapper" style="top:61px;">
+                <div class="DM-Title">
+                    Upload Inspection Data<text id="viewData" style="display:none;"> (View)</text>
+                    <div class="DM_Cancel_Btn" title="Back"><i class="fa fa-arrow-left" data-id="TestFR1.2_279" data-roll="5"></i></div>
+                    <div style="display:none;">
+                        <input class="commonTextBox" id="ddlInspNoList" name="InspNo" readonly="readonly" type="text" value="TestFR1.2_279" />
+                    </div>
+                </div>
+                <div class="PV-CV-Info-Div B0px">
+                    <div class="common100-perc commonMT10px TAC">
+                        <div class="Right-Icon-Div"><img src="/Content/images/Right-Icon.png"></div>
+                    </div>
+                    <div class="common100-perc">
+                        <div class="TY-Txt">Thank You!</div>
+                        <div class="TY-Info-Txt">All the required images and videos are uploaded.</div>
+                        <div class="TY-Info-Txt">Request you to click any of the following button to update the status of the Inspection done.</div>
+
+
+                    </div>
+                </div>
+                <div class="PV-CV-Info-Div B0px">
+                    <div class="common100-perc commonMT10px">
+
+                        <div class="common50-perc ">
+                            <div class="Txt-Box-Info">Physical Date Time</div>
+                            <div class="TextBox-Calc-Div Width150px mrLeft5px">
+                                <input class="TextBox-Calc width110px clsFontSize" id="txtFromDate" name="PhysicalInspDatestr" placeholder="DD-MMM-YYYY" readonly="readonly" style="font-size:13px" type="text" value="08-May-2023" />
+                                <div class="TextBox-Icon" id="btnTxtFromDate"></div>
+                            </div>
+                            <div>
+
+                                <input Placeholder="   HH:MM AM" autocomplete="off" class="DT_Class " id="txtFromTime" name="PhysicalInspTimestr" readonly="readonly" type="text" value="08:35 PM" />
+                            </div>
+                        </div>
+
+                        <div class="common50-perc ">
+                            <div class="Txt-Box-Info txt-center">Remarks</div>
+                            <textarea class="TY_Txt_Area mrLeft" cols="20" id="taRemarks" name="AppInspRemark" rows="2">ok</textarea>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="PV-CV-Info-Div B0px">
+                    <div class="common100-perc commonMT10px">
+
+
+
+
+                        <div class="common50-perc ">
+                            <div class="Txt-Box-Info">Customer_Mobile Number</div>
+
+                            <input id="txtMbl" name="ContData" type="text" value="9876545454" />
+                        </div>
+                        <div class="common50-perc ">
+                            <div class="Txt-Box-Info txt-center">Customer_Email ID</div>
+
+                            <!-- <input class="mrLeft" id="txtEmail" name="EmailID" type="text" value="sunil.datacomp123@gmail.com" /> -->
+                            <textarea class="TY_Txt_Area mrLeft" cols="20" id="taRemarks" name="" rows="2"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="Table_Btm_Btn_Div">
+                    <div class="PV-CV-Bottom-Menu-Div" style="border-top: solid 1px #000;">
+                        <button data-inspection-status="7" type="button" id="idRecommend" class="Menu-Box active clsInspStatusButton">Recommend</button>
+                        <button data-inspection-status="8" type="button" id="idNotRecommend" class="Menu-Box active clsInspStatusButton">Not Recommend</button>
+                        <button data-inspection-status="2" type="button" id="idReferToUW" class="Menu-Box active clsInspStatusButton">Refer To UW</button>
+                        <button data-inspection-status="3" type="button" id="idSubmitted" style="display:none;" class="Menu-Box active clsInspStatusButton">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <input id="InspectionStatus" name="InspectionStatus" type="hidden" value="" /><input id="InspCate" name="InspCate" type="hidden" value="INSPECTION REQUIRED" /></form>
+        <hr />
+        <footer></footer>
+
+    </div>
+
+
     <script>
-        var accordions = document.getElementsByClassName("accordion");
+        function CheckClaimUserAlreadyLogin() {
+            debugger;
+            $.ajax({
+                url: "/Login/CheckClaimUserAlreadyLogin",
+                type: "POST",
+                //data: JSON.stringify({ emCD: emCD }),
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                async: true,
+                success: function(data) {
+                    if (data.IsdualLogin == "Y") {
 
-        for (var i = 0; i < accordions.length; i++) {
-            accordions[i].onclick = function() {
-                this.classList.toggle('is-open');
-
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    // accordion is currently open, so close it
-                    content.style.maxHeight = null;
-                } else {
-                    // accordion is currently closed, so open it
-                    content.style.maxHeight = content.scrollHeight + "px";
+                        location.href = '/Login/AutoLogout';
+                    } else {
+                        //alert(data.IsdualLogin);
+                        //alert("Data Not Found.");
+                    }
+                    // TableManageButtons.init();
+                },
+                error: function() {
+                    console.log('there is some error');
                 }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        //Global Section
+        //var unloadEvent = function (e) {
+        //    var confirmationMessage = "Warning: Leaving this page will result in any unsaved data being lost. Are you sure you wish to continue?";
+        //    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+        //    return confirmationMessage; //Webkit, Safari, Chrome etc.
+        //};
+        //window.addEventListener("beforeunload", unloadEvent);
+        function handleBrowserCloseButton(event) {
+            debugger;
+            //if (($(window).width() - window.event.clientX) < 35 && window.event.clientY < 0) {
+            //    //Call method by Ajax call
+            //    alert('Browser close button clicked');
+            //}
+        }
+
+
+        function ShowLoader(flag) {
+            if (flag) {
+                $("#divLoader").show();
+            } else {
+                $("#divLoader").hide();
             }
         }
+    </script>
+
+
+    <script src="/Scripts/jquery-3.4.1.js"></script>
+    <script src="/Scripts/jquery-3.4.1.min.js"></script>
+    <link href="/Content/css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <link href="/Content/css/datepicker.css" rel="stylesheet" />
+
+    <script src="/Content/js/jquery-1.7.1.min.js"></script>
+    <script src="/Content/js/jquery-ui-1.8.18.custom.min.js"></script>
+    <script src="/Content/js/jquery-ui-timepicker-addon.js"></script>
+
+    <script src="/Content/js/jquery.formatter.min.js"></script>
+
+    <script type="text/javascript">
+        var status = 0;
+        $(document).ready(function() {
+            debugger;
+            if (status != 0 && status != 4 && status != 11) {
+                //$('#viewData').val("View");
+                //document.getElementById('viewData').style.display = 'initial';
+
+                document.getElementById('idRecommend').style.pointerEvents = 'none';
+                $('#idRecommend').css("opacity", "0.5");
+
+                document.getElementById('idNotRecommend').style.pointerEvents = 'none';
+                $('#idNotRecommend').css("opacity", "0.5");
+
+                document.getElementById('idReferToUW').style.pointerEvents = 'none';
+                $('#idReferToUW').css("opacity", "0.5");
+
+                document.getElementById('idSubmitted').style.pointerEvents = 'none';
+                $('#idSubmitted').css("opacity", "0.5");
+
+                document.getElementById('txtFromDate').style.pointerEvents = 'none';
+                $('#txtFromDate').css("opacity", "0.8");
+
+                document.getElementById('txtFromTime').style.pointerEvents = 'none';
+                $('#txtFromTime').css("opacity", "0.8");
+
+                document.getElementById('taRemarks').style.pointerEvents = 'none';
+                $('#taRemarks').css("opacity", "0.8");
+
+                document.getElementById('btnTxtFromDate').style.pointerEvents = 'none';
+                $('#btnTxtFromDate').css("opacity", "0.8");
+
+                return false;
+            }
+        });
+
+        $(function() {
+            debugger;
+            var today = new Date();
+
+            $('#txtFromDate').datepicker({
+                inline: true,
+                showOtherMonths: true,
+                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                dateFormat: "dd-M-yy",
+                changeMonth: true,
+                changeYear: true,
+                maxDate: today
+                    //beforeShow: function () {
+                    //    jQuery(this).datepicker('option', 'maxDate', jQuery('#txtToDate').val());
+                    //}
+            });
+
+            $(".ui-datepicker-title select").css("all", "unset");
+
+            $('#btnTxtFromDate').click(function() {
+                $('#txtFromDate').blur();
+                $('#txtFromDate').focus();
+            });
+
+
+            if ($('#txtFromDate').val() == "0001-01-01 12:00:00 AM") {
+                $('#txtFromDate').val("");
+            }
+
+            if ($('#txtFromDate').val() == "01-01-0001 00:00:00") {
+                $('#txtFromDate').val("");
+            }
+
+            if ($('#txtFromDate').val() == "01-Jan-001") {
+                $('#txtFromDate').val("");
+            }
+
+            if ($('#txtFromDate').val() == "01-Jan-0001") {
+                $('#txtFromDate').val("");
+            }
+
+            if ($('#txtFromDate').val() == "1/1/0001 12:00:00 AM") {
+                $('#txtFromDate').val("");
+            }
+
+            $(".datepicker").formatter({
+                'pattern': '{{99}}-{{99}}-{{9999}}',
+                'persistent': false
+            });
+
+            $('#txtFromTime').timepicker({
+
+                controlType: 'select',
+                timeFormat: 'hh:mm TT',
+                hour: '05',
+                minute: '36',
+                maxTime: Date.now()
+                    // timeFormat: 'hh:mm TT'
+
+            });
+
+            if ($('#txtFromTime').val() == "0001-01-01 12:00:00 AM") {
+                $('#txtFromTime').val("");
+            }
+
+            if ($('#txtFromTime').val() == "12:00 AM") {
+                $('#txtFromTime').val("");
+            }
+
+            if ($('#txtFromTime').val() == "12:01 AM") {
+                $('#txtFromTime').val("");
+            }
+
+            if ($('#txtFromTime').val() == "1/1/0001 12:00:00 AM") {
+                $('#txtFromTime').val("");
+            }
+        });
+
+        $(".fa-arrow-left").on("click", function(e) {
+            debugger;
+            var $buttonClicked = $(this);
+            var data = $buttonClicked.attr('data-id');
+            var roll = $buttonClicked.attr('data-roll');
+            if (roll == 5)
+                window.location.href = '/UploadInspectionDocuments/Index?inspNo=' + data + ''
+            else
+                window.location.href = '/UploadInspectionDocuments/UploadDoc?inspNo=' + data + ''
+        });
+
+        var InspStatusEnum = {
+            'Recommend': '7',
+            'NotRecommend': '8',
+            'ReferToUW': '2',
+            'Submitted': '3'
+        }
+
+        $("button.clsInspStatusButton").on("click", function(e) {
+
+            //Validate and submit
+            var inspStatus = $(this).data("inspection-status");
+            var remarks = $("#taRemarks").val();
+            var mblno = $('#txtMbl').val();
+            var custemail = $('#txtEmail').val();
+            //var phonenoregx = /^\d{10}$/;
+
+
+            var fit_start_Date = $("#txtFromDate").val();
+            var fit_start_time = $("#txtFromTime").val();
+            var currentTime = new Date();
+
+            var month_names = ["Jan", "Feb", "Mar",
+                "Apr", "May", "Jun",
+                "Jul", "Aug", "Sep",
+                "Oct", "Nov", "Dec"
+            ];
+            var day = (currentTime.getDate() < 10 ? '0' : '') + currentTime.getDate();
+            var month_index = currentTime.getMonth();
+            var year = currentTime.getFullYear();
+            var currentTime1 = day + "-" + month_names[month_index] + "-" + year;
+
+            if (fit_start_time != "") {
+                var time1 = $("#txtFromTime").val();
+                var hours1 = Number(time1.match(/^(\d+)/)[1]);
+                var minutes1 = Number(time1.match(/:(\d+)/)[1]);
+                var AMPM1 = time1.match(/\s(.*)$/)[1];
+                if (AMPM1 == "PM" && hours1 < 12) hours1 = hours1 + 12;
+                if (AMPM1 == "AM" && hours1 == 12) hours1 = hours1 - 12;
+                var sHours1 = parseInt(hours1);
+                var sMinutes1 = minutes1.toString();
+
+                if (currentTime1 == fit_start_Date) {
+                    if (parseInt(sHours1) > parseInt(currentTime.getHours())) {
+                        alert('Physical Time can not be more than Prior Time');
+                        return false;
+                    } else if (parseInt(sHours1) == parseInt(currentTime.getHours())) {
+                        if (parseInt(sMinutes1) > parseInt(currentTime.getMinutes())) {
+                            alert('Physical Time can not be more than Prior Time');
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            if ($('#txtFromDate').val() == "") {
+
+                alert("Please select Physical Date.");
+                return false;
+
+            }
+
+
+            if ($('#txtFromDate').val() != "") {
+                if ($('#txtFromTime').val() == "") {
+                    alert("Please select Physical Time.");
+                    return false;
+                }
+            }
+
+            if ($('#txtFromTime').val() != "") {
+                if ($('#txtFromDate').val() == "") {
+                    alert("Please select Physical Date.");
+                    return false;
+                }
+            }
+            if (mblno == "") {
+
+                alert("Please Enter Mobile Number.");
+                return false;
+            }
+            if (mblno != "") {
+                if (!mblno.match(/^\d{10}$/)) {
+                    alert("Mobile number not in format,it should be ten digit and numeric");
+                    return false;
+                }
+            }
+            if (mblno != "") {
+                if (mblno.length < 10) {
+                    alert("length of Mobile Number not less than ten.");
+                    return false;
+
+                }
+
+            }
+            if (mblno != "") {
+                if (mblno.length > 10) {
+                    alert("length of Mobile Number must not greater than ten.");
+                    return false;
+
+                }
+            }
+            if (custemail != "") {
+                if (!custemail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                    alert("Email not in Valid Format")
+                    return false;
+                }
+            }
+
+            if ((InspStatusEnum.NotRecommend == inspStatus || InspStatusEnum.ReferToUW == inspStatus)) {
+                if (remarks) {} else {
+                    alert("Remarks is required");
+                    return;
+                }
+            }
+
+            $("#InspectionStatus").val(inspStatus);
+            $("#AppInspRemark").val(remarks);
+
+            ConfirmModelPopup('Do you want to submit status?', function(checkstr) {
+                if (checkstr == true) {
+                    ShowLoader(true);
+                    $("#frmUploadInspDocumentsMulti").submit();
+
+                    //   $("#frmUploadInspDocuments").attr("action", RootURL() + "UploadInspectionDocuments/SendInspectionStatus").submit();
+                    $(this).hide();
+                } else {
+                    return false;
+                }
+            }, 'zoomin');
+
+
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $(function() {
+
+            //browser back button disabled function ... no action performed
+
+            //if (window.history && window.history.pushState) {
+            //    history.pushState("nohb", null, "");
+
+            //    $(window).on("popstate", function (event) {
+            //        if (!event.originalEvent.state) {
+            //            history.pushState("nohb", null, "");
+            //            return;
+            //        }
+            //    });
+            //}
+
+
+            $('#btnLogout').on('click', function() {
+
+                location.href = '/Login/Logout';
+
+            });
+
+            $('#Evaluate').on('click', function() {
+
+                location.href = '/Inspection/Index?search=1';
+            });
+
+            $('#Assign').on('click', function() {
+                location.href = '/AssignInspection/ClearInspectionDtlsLoad';
+            });
+
+            $('#Distance').on('click', function() {
+
+                location.href = '/InspectionDistanceAppr/Distance?search=1';
+            });
+        });
+
+
+        //function DisableBackButton() {
+        //window.history.forward()
+        //}
+        //DisableBackButton();
+        //window.onload = DisableBackButton;
+        //window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+        //window.onunload = function() { void (0) }
     </script>
 </body>
 
