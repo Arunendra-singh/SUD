@@ -1335,6 +1335,10 @@ span.checkmark {
     width: 100%;
 }
 
+.EligibilityCretTable table {
+    margin-top: 15px;
+}
+
 .EligibilityCretTable table,
 .EligibilityCretTable table td {
     border: 1px solid #000;
