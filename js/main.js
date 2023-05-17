@@ -35,9 +35,15 @@ $(document).ready(function() {
     $(".card .PlanKnowMore").click(function() {
         $(".card .PlanKnowMore").not(this).parent(".card").removeClass("cardBlueActive");
         $(this).parents(".card").toggleClass("cardBlueActive");
+
+        if ($('.PlanBoxHead .WhiteImg').hasClass('imgshow') && $('.PlanBoxHead .ColorImg').hasClass('imghide')) {
+            $('.PlanBoxHead .WhiteImg').removeClass('imgshow');
+            $('.PlanBoxHead .ColorImg').removeClass('imghide');
+        } else {
+            $('.PlanBoxHead .WhiteImg').addClass('imgshow');
+            $('.PlanBoxHead .ColorImg').addClass('imghide');
+        }
     });
-
-
 
 })
 

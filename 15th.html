@@ -864,6 +864,8 @@
     <script src="js/main.js"></script>
 
     <script>
+        // For multiple accordion display one at a time
+
         const buttons = document.querySelectorAll('.card');
         const accordions = document.querySelectorAll('.accordion');
 
@@ -884,6 +886,34 @@
 
         /*********************************************************************/
 
+        // by default first tab content showing 
+        $(".accordion1 .tab_content").hide();
+        $(".accordion1 .tab_content:first").show();
+
+        $(".accordion2 .tab_content").hide();
+        $(".accordion2 .tab_content:first").show();
+
+        /* if in tab mode */
+        $("ul.tabs li").click(function() {
+
+            $(".tab_content").hide();
+            $(".tab_content .ac_section_title").removeClass("active");
+            $(".tab_content .ac_section_content").hide();
+
+
+            let activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+
+            $("ul.tabs li").removeClass("active");
+            $(this).addClass("active");
+
+            // $(this).last().addClass("last_tab");
+        });
+
+
+        /*********************************************************************/
+        // for active accorion content when click on heading text
+
         const acc = document.querySelectorAll('.acc_content a');
 
         acc.forEach((accordion) => {
@@ -892,14 +922,13 @@
                 for (let i = 0; i < acc.length; i++) {
                     acc[i].addEventListener("click", function() {
                         this.classList.toggle("active");
+
                         let panel = this.nextElementSibling;
                         if (panel.style.display === "block") {
                             panel.style.display = "none";
                         } else {
                             panel.style.display = "block";
                         }
-
-                        this.querySelector(".OpenPlus").focus();
                     });
                 }
             });
@@ -913,26 +942,6 @@
         });
 
         /******************************************************/
-
-        // by default first tab content showing 
-        $(".accordion1 .tab_content").hide();
-        $(".accordion1 .tab_content:first").show();
-
-        $(".accordion2 .tab_content").hide();
-        $(".accordion2 .tab_content:first").show();
-
-        /* if in tab mode */
-        $("ul.tabs li").click(function() {
-
-            $(".tab_content").hide();
-            let activeTab = $(this).attr("rel");
-            $("#" + activeTab).fadeIn();
-
-            $("ul.tabs li").removeClass("active");
-            $(this).addClass("active");
-
-            // $(this).last().addClass("last_tab");
-        });
     </script>
 
 </body>

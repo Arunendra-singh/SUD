@@ -1277,7 +1277,7 @@ span.checkmark {
 
 /* Show the indicator (dot/circle) when checked */
 
-._container input:checked~.checkmark:after {
+a.ac_section_title.active ._container input:checked~.checkmark:after {
     display: block;
 }
 
@@ -1481,9 +1481,40 @@ button.FooterBtn.RedBtn {
     .cardBlueActive .PlanKnowMore span:last-child {
         display: block;
     }
+    div.header {
+        margin-bottom: 10px;
+    }
+    .pageContent {
+        padding: 8px 0px;
+    }
+    .PlanSelect .head_txt {
+        padding: 0 5px;
+    }
+    .PlanCntnDiv {
+        padding: 21px 0px;
+        height: 315px;
+    }
+    .PlanBoxMainDiv {
+        height: 875px;
+    }
+    h3.head_txt.Width100per {
+        padding: 0 20px;
+    }
+    .pageContent .pro_page.accordion {
+        margin-top: -550px;
+        padding: 0 20px;
+    }
+    .EligibilityCretTable table,
+    .EligibilityCretTable table td {
+        padding: 6px 8px;
+    }
 }
 
 @media screen and (max-width: 600px) {
+    .PlanSelect .head_txt {
+        text-align: justify;
+        padding: 0 5px;
+    }
     ul.tabs li {
         margin: 0 10px 0 0;
         padding: 10px 4px;

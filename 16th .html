@@ -38,6 +38,7 @@
         
         .pageContent h2.blueHeading {
             font-size: 25px;
+            font-family: 'poppinsMedium';
         }
         
         .leftBlock .contents p.gray {
@@ -56,6 +57,7 @@
         .img_section {
             color: #000;
             margin-bottom: 30px;
+            font-family: 'poppinsMedium';
             font-weight: 500;
         }
         
@@ -71,6 +73,44 @@
             border-radius: 30px;
             color: #0475BC;
             opacity: 0.9;
+            font-family: 'poppinsMedium';
+            font-weight: 600;
+        }
+        
+        .accordion-content h3.ac_title {
+            color: #000000;
+            border: 1px solid #D4D4D4;
+            border-radius: 8px;
+            opacity: 1;
+            padding: 10px 15px;
+            width: 95%;
+            float: left;
+        }
+        
+        h3.ac_title:after {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 5px;
+            float: right;
+            position: relative;
+            top: 10px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 10px solid #000;
+        }
+        
+        h3.ac_title.active:after {
+            transform: rotate(180deg);
+            top: 8px;
+        }
+        
+        .ac_content {
+            display: none;
+        }
+        
+        .ac_content.active {
+            display: block;
         }
     </style>
 </head>
@@ -130,6 +170,25 @@
                                     </ul>
                                 </div>
                             </div>
+
+                            <div class="accordion-box">
+                                <div class="accordion-content">
+                                    <h3 class="ac_title"> Why you should buy this plan </h3>
+                                    <div class="ac_content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                            ea commodo consequat.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <h3 class="ac_title"> Why you should buy this plan </h3>
+                                    <div class="ac_content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                            ea commodo consequat.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -150,62 +209,25 @@
     <script src="js/main.js"></script>
 
     <script>
-        $(document).ready(function() {
+        const element = document.querySelector('.accordion-content .ac_title');
 
-            // tab content
-            $(".tab_content").hide();
-            $(".tab_content:first").show();
+        element.addEventListener('click', () => {
+            // element.classList.add('active');
 
-            /* if in tab mode */
-            $("ul.tabs li").click(function() {
+            if (element.classList.contains('active')) {
+                // If the condition is true, remove the class
+                element.classList.remove('active');
+                element.nextElementSibling.classList.remove("active");
+            } else {
+                element.classList.add('active');
+                element.nextElementSibling.classList.add("active");
+            }
 
-                $(".tab_content").hide();
-                var activeTab = $(this).attr("rel");
-                $("#" + activeTab).fadeIn();
 
-                $("ul.tabs li").removeClass("active");
-                $(this).addClass("active");
-
-                $(".tab_drawer_heading").removeClass("d_active");
-                $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
-
-            });
-
-            $('ul.tabs li').last().addClass("tab_last");
 
         });
-        //product selection page PlanBox ends
 
-        const acc = document.querySelectorAll('.acc_content a');
-
-        acc.forEach((accordion) => {
-            accordion.addEventListener('click', function() {
-
-                const current = document.querySelector('.ac_section_title.active');
-                if (current) {
-                    current.classList.remove('active');
-                    current.nextElementSibling.style.display = 'none';
-                }
-
-                this.classList.toggle('active');
-                this.nextElementSibling.style.display = 'block';
-            });
-        });
-
-
-
-        $("input[name=radio]").focus(function() {
-            document.getElementsByClassName("acc_content").focus();
-        });
-        document.getElementsByClassName("acc_content").focus();
-
-        ///////////////////////////////////////////////////////
-
-        const link = document.querySelector('a.ac_section_title.active');
-        const img = link.querySelector('img');
-        link.addEventListener('click', () => {
-            img.classList.add('active');
-        });
+        /*********************/
     </script>
 
 </body>
